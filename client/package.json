@@ -2,6 +2,12 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24.13.0",
+    "bun": ">=1.3.8",
+    "npm": "please use Bun",
+    "pnpm": "please use Bun"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
