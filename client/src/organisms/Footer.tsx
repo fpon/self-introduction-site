@@ -1,8 +1,10 @@
 export function Footer() {
   return (
-    <footer className="border-t border-card-border py-8">
-      <div className="mx-auto max-w-6xl px-6 text-center text-sm text-muted">
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+    <footer className="border-t border-border py-12">
+      <div className="mx-auto max-w-5xl px-6">
+        <p className="text-xs text-muted">
+          &copy; {new Date().getFullYear()} Your Name
+        </p>
       </div>
     </footer>
   );

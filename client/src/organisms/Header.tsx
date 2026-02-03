@@ -1,23 +1,22 @@
 "use client";
 
 const navItems = [
-  { href: "#about", label: "経歴" },
-  { href: "#works", label: "制作物" },
-  { href: "#philosophy", label: "思想" },
-  { href: "#management", label: "マネジメント" },
-  { href: "#contact", label: "連絡先" },
+  { href: "#about", label: "About" },
+  { href: "#works", label: "Works" },
+  { href: "#philosophy", label: "Philosophy" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-card-border bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-sm">
+      <nav className="mx-auto flex h-20 max-w-5xl items-center justify-between px-6">
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-xl font-bold text-transparent"
+          className="text-sm font-medium tracking-tight"
         >
-          Portfolio
+          Your Name
         </button>
         <ul className="hidden gap-8 md:flex">
           {navItems.map((item) => (
