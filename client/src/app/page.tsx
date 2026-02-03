@@ -3,8 +3,6 @@ import { ContactSection } from "@/organisms/ContactSection";
 import { Footer } from "@/organisms/Footer";
 import { Header } from "@/organisms/Header";
 import { HeroSection } from "@/organisms/HeroSection";
-import { ManagementSection } from "@/organisms/ManagementSection";
-import { PhilosophySection } from "@/organisms/PhilosophySection";
 import { WorksSection } from "@/organisms/WorksSection";
 
 export default function Home() {
@@ -13,10 +11,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
         <WorksSection />
-        <PhilosophySection />
-        <ManagementSection />
+        <AboutSection />
         <ContactSection />
       </main>
       <Footer />

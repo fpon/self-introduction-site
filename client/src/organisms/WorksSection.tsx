@@ -1,67 +1,56 @@
-import { SectionHeader } from "@/molecules/SectionHeader";
-
 const works = [
   {
     title: "Project Alpha",
-    category: "Web App",
-    tags: ["Next.js", "TypeScript"],
+    category: "Web Application",
     year: "2024",
   },
   {
     title: "Project Beta",
     category: "Mobile App",
-    tags: ["React Native", "Expo"],
     year: "2023",
   },
   {
     title: "Project Gamma",
     category: "AI Tool",
-    tags: ["Python", "OpenAI"],
     year: "2023",
   },
   {
     title: "Project Delta",
-    category: "Web App",
-    tags: ["Vue.js", "Firebase"],
+    category: "Web Application",
     year: "2022",
   },
 ];
 
 export function WorksSection() {
   return (
-    <section id="works" className="py-24">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionHeader title="Works" />
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {works.map((work) => (
-            <div key={work.title} className="group cursor-pointer">
-              <div className="aspect-[4/3] overflow-hidden bg-hover">
-                <div className="flex h-full items-center justify-center text-muted transition-transform duration-300 group-hover:scale-105">
-                  <span className="text-4xl font-bold opacity-10">
-                    {work.title.charAt(0)}
-                  </span>
-                </div>
+    <section id="works" className="px-6 py-32">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex items-end justify-between">
+          <h2 className="text-5xl font-bold tracking-tighter md:text-7xl">
+            Works
+          </h2>
+          <p className="text-sm text-muted">Selected Projects</p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {works.map((work, index) => (
+            <div
+              key={work.title}
+              className="group relative aspect-[4/3] cursor-pointer overflow-hidden bg-accent"
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-[20vw] font-bold text-background/5 md:text-[10vw]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
-              <div className="mt-4">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-muted">{work.category}</span>
-                  <span className="text-xs text-muted">·</span>
-                  <span className="text-xs text-muted">{work.year}</span>
-                </div>
-                <h3 className="mt-1 text-lg font-medium tracking-tight transition-opacity group-hover:opacity-60">
+              <div className="absolute inset-0 flex flex-col justify-end p-8 text-background">
+                <p className="text-xs uppercase tracking-widest opacity-60">
+                  {work.category} — {work.year}
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
                   {work.title}
                 </h3>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {work.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="border border-border px-2 py-0.5 text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
+              <div className="absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
             </div>
           ))}
         </div>

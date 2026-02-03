@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --muted: #666666;
-  --border: #eaeaea;
-  --accent: #000000;
-  --hover: #f5f5f5;
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #18181b;
+  --hover: #f4f4f5;
 }
 
 @theme inline {
@@ -22,12 +22,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
-    --muted: #999999;
-    --border: #333333;
-    --accent: #ffffff;
-    --hover: #111111;
+    --background: #09090b;
+    --foreground: #fafafa;
+    --muted: #a1a1aa;
+    --border: #27272a;
+    --accent: #fafafa;
+    --hover: #18181b;
   }
 }
 
@@ -44,4 +44,29 @@ html {
 ::selection {
   background: var(--foreground);
   color: var(--background);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
 }
