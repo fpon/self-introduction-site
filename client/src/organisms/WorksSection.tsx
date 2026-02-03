@@ -3,60 +3,67 @@ import { SectionHeader } from "@/molecules/SectionHeader";
 const works = [
   {
     title: "Project Alpha",
-    description: "Next.jsを使用したWebアプリケーション",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+    category: "Web App",
+    tags: ["Next.js", "TypeScript"],
     year: "2024",
   },
   {
     title: "Project Beta",
-    description: "React Nativeを使用したモバイルアプリ",
-    tags: ["React Native", "Expo", "Firebase"],
+    category: "Mobile App",
+    tags: ["React Native", "Expo"],
     year: "2023",
   },
   {
     title: "Project Gamma",
-    description: "AIを活用した業務効率化ツール",
-    tags: ["Python", "OpenAI", "FastAPI"],
+    category: "AI Tool",
+    tags: ["Python", "OpenAI"],
     year: "2023",
+  },
+  {
+    title: "Project Delta",
+    category: "Web App",
+    tags: ["Vue.js", "Firebase"],
+    year: "2022",
   },
 ];
 
 export function WorksSection() {
   return (
-    <section id="works" className="py-32">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="works" className="py-24">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeader title="Works" />
-        <div className="grid gap-0 md:grid-cols-2">
-          <div>
-            <p className="text-2xl font-medium leading-relaxed tracking-tight md:text-3xl">
-              制作物
-            </p>
-          </div>
-          <div className="mt-8 md:mt-0">
-            {works.map((work, index) => (
-              <div
-                key={work.title}
-                className={`group py-8 ${index !== works.length - 1 ? "border-b border-border" : ""}`}
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-lg font-medium">{work.title}</p>
-                    <p className="mt-1 text-sm text-muted">
-                      {work.description}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {work.tags.map((tag) => (
-                        <span key={tag} className="text-xs text-muted">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <span className="text-xs text-muted">{work.year}</span>
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {works.map((work) => (
+            <div key={work.title} className="group cursor-pointer">
+              <div className="aspect-[4/3] overflow-hidden bg-hover">
+                <div className="flex h-full items-center justify-center text-muted transition-transform duration-300 group-hover:scale-105">
+                  <span className="text-4xl font-bold opacity-10">
+                    {work.title.charAt(0)}
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="mt-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-muted">{work.category}</span>
+                  <span className="text-xs text-muted">·</span>
+                  <span className="text-xs text-muted">{work.year}</span>
+                </div>
+                <h3 className="mt-1 text-lg font-medium tracking-tight transition-opacity group-hover:opacity-60">
+                  {work.title}
+                </h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {work.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="border border-border px-2 py-0.5 text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

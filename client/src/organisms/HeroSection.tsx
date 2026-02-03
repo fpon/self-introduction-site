@@ -1,17 +1,16 @@
 export function HeroSection() {
   return (
-    <section className="flex min-h-screen items-center pt-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <h1 className="text-4xl font-medium leading-tight tracking-tight md:text-6xl lg:text-7xl">
-          Software Engineer
-          <br />
-          <span className="text-muted">building products</span>
-          <br />
-          <span className="text-muted">that matter.</span>
+    <section className="flex min-h-[80vh] items-end pb-16 pt-20">
+      <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
+        <p className="text-sm text-muted">
+          Software Engineer / Product Builder
+        </p>
+        <h1 className="mt-4 text-6xl font-bold tracking-tighter md:text-8xl lg:text-9xl">
+          Your Name
         </h1>
-        <p className="mt-12 max-w-lg text-base leading-relaxed text-muted">
+        <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
           プロダクト開発とチームマネジメントに情熱を注ぐエンジニア。
-          ユーザーに価値を届けることを大切にしています。
+          ユーザーに価値を届けるプロダクトを作っています。
         </p>
       </div>
     </section>
