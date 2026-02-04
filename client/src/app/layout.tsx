@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import { CustomCursor } from "@/components/CustomCursor";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Footer } from "@/organisms/Footer";
+import { Header } from "@/organisms/Header";
 import "./globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Portfolio | Your Name",
-  description: "Software Engineer Portfolio",
+  description: "Creative Developer Portfolio - Building digital experiences",
 };
 
 export default function RootLayout({
@@ -20,8 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${ibmPlexMono.variable} font-mono antialiased`}>
-        {children}
+      <body
+        className={`${ibmPlexMono.variable} cursor-none font-mono antialiased`}
+      >
+        <LoadingScreen />
+        <CustomCursor />
+        <SmoothScroll>
+          <Header />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

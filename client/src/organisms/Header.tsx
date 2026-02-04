@@ -1,60 +1,78 @@
 "use client";
 
-import { useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { MagneticButton } from "@/components/MagneticButton";
 
 const navItems = [
-  { href: "#home", label: "home" },
-  { href: "#works", label: "Works" },
-  { href: "#profile", label: "Profile" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/works", label: "Works" },
+  { href: "/profile", label: "Profile" },
+  { href: "/management", label: "Management" },
 ];
 
 const socials = [
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "GitHub", href: "https://github.com" },
+  { name: "Tw", href: "https://twitter.com", full: "Twitter" },
+  { name: "Gh", href: "https://github.com", full: "GitHub" },
 ];
 
 export function Header() {
-  const [active, setActive] = useState("home");
+  const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 z-50 w-full">
-      <nav className="flex h-14 items-center justify-between px-5">
-        <div className="text-[13px]">
-          <span className="font-medium">YN</span>
-        </div>
-        <ul className="flex items-center gap-8">
+    <motion.header
+      className="fixed top-0 z-50 w-full mix-blend-difference"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, delay: 1.5, ease: [0.76, 0, 0.24, 1] }}
+    >
+      <nav className="flex h-20 items-center justify-between px-8">
+        <MagneticButton>
+          <Link href="/" className="text-lg font-semibold text-white">
+            YN.
+          </Link>
+        </MagneticButton>
+
+        <ul className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a
-                href={item.href}
-                onClick={() => setActive(item.label)}
-                className={`relative text-[13px] transition-colors hover:text-foreground ${
-                  active === item.label ? "text-foreground" : "text-muted"
-                }`}
-              >
-                {item.label}
-                {active === item.label && (
-                  <span className="absolute -bottom-1 left-0 h-px w-full bg-foreground" />
-                )}
-              </a>
+              <MagneticButton>
+                <Link
+                  href={item.href}
+                  className={`relative px-4 py-2 text-[13px] text-white transition-opacity hover:opacity-60 ${
+                    pathname === item.href ? "opacity-100" : "opacity-60"
+                  }`}
+                >
+                  {item.label}
+                  {pathname === item.href && (
+                    <motion.span
+                      layoutId="nav-indicator"
+                      className="absolute bottom-0 left-4 right-4 h-px bg-white"
+                    />
+                  )}
+                </Link>
+              </MagneticButton>
             </li>
           ))}
         </ul>
+
         <div className="flex items-center gap-4">
           {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              className="text-[13px] text-muted transition-colors hover:text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {social.name}
-            </a>
+            <MagneticButton key={social.name}>
+              <a
+                href={social.href}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-[11px] text-white transition-colors hover:bg-white hover:text-black"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={social.full}
+              >
+                {social.name}
+              </a>
+            </MagneticButton>
           ))}
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }

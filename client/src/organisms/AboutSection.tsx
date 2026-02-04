@@ -1,57 +1,106 @@
-const skills = ["TypeScript", "React", "Next.js", "Node.js", "Python", "AWS"];
+"use client";
 
-const experiences = [
-  { period: "2020 —", role: "Senior Engineer", company: "Tech Company" },
-  { period: "2018 — 20", role: "Engineer", company: "Startup Inc." },
-  { period: "2016 — 18", role: "Junior Engineer", company: "Web Agency" },
+import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";
+import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
+
+const skills = [
+  { name: "TypeScript", level: 95 },
+  { name: "React / Next.js", level: 90 },
+  { name: "Node.js", level: 85 },
+  { name: "Python", level: 80 },
+  { name: "AWS", level: 75 },
+  { name: "Team Management", level: 85 },
 ];
 
 export function AboutSection() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
-    <section id="profile" className="min-h-screen px-5 py-20">
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-        <div>
-          <h2 className="text-[15px]">Profile</h2>
-          <div className="mt-8 border border-border bg-background p-6">
-            <p className="text-[14px] leading-relaxed">
-              Webアプリケーションの開発を中心に、フロントエンドからバックエンドまで幅広く経験。
-              チームリードとしてプロダクト開発をリードしています。
-            </p>
-            <p className="mt-4 text-[14px] leading-relaxed">
-              ユーザーファーストな開発と、チームの成長を大切にしています。
-            </p>
+    <section ref={containerRef} className="relative overflow-hidden py-32">
+      <motion.div
+        className="absolute left-0 top-1/2 -translate-y-1/2 whitespace-nowrap text-[20vw] font-bold text-foreground/[0.02]"
+        style={{ x }}
+      >
+        ABOUT ME • ABOUT ME • ABOUT ME •
+      </motion.div>
+
+      <div className="relative z-10 px-8">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div>
+            <ScrollReveal>
+              <span className="text-[11px] uppercase tracking-widest text-muted">
+                About
+              </span>
+              <h2 className="mt-2 text-[clamp(2rem,6vw,4rem)] font-bold leading-tight tracking-tighter">
+                <TextReveal delay={0.2}>Crafting Digital</TextReveal>
+                <br />
+                <TextReveal delay={0.3}>Experiences</TextReveal>
+              </h2>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <p className="mt-8 text-[15px] leading-relaxed text-muted">
+                10年以上のソフトウェア開発経験を持つエンジニアです。
+                フロントエンドからバックエンド、インフラまで幅広い技術スタックを扱い、
+                チームリードとして複数のプロダクト開発を成功に導いてきました。
+              </p>
+              <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
+                価値あるプロダクトを生み出すことに情熱を注いでいます。
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.5}>
+              <Link
+                href="/profile"
+                className="mt-8 inline-flex items-center gap-2 text-[13px] font-medium underline underline-offset-4 transition-opacity hover:opacity-60"
+              >
+                Read More <span>→</span>
+              </Link>
+            </ScrollReveal>
           </div>
 
-          <div className="mt-8">
-            <p className="text-[12px] text-muted">Skills</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="border border-border px-3 py-1 text-[12px]"
-                >
-                  {skill}
-                </span>
+          <div>
+            <ScrollReveal delay={0.3}>
+              <span className="text-[11px] uppercase tracking-widest text-muted">
+                Skills
+              </span>
+            </ScrollReveal>
+            <div className="mt-6 space-y-6">
+              {skills.map((skill, index) => (
+                <ScrollReveal key={skill.name} delay={0.4 + index * 0.1}>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[14px] font-medium">
+                      {skill.name}
+                    </span>
+                    <span className="text-[12px] text-muted">
+                      {skill.level}%
+                    </span>
+                  </div>
+                  <div className="mt-2 h-px bg-border">
+                    <motion.div
+                      className="h-full bg-foreground"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.5 + index * 0.1,
+                        ease: [0.76, 0, 0.24, 1],
+                      }}
+                    />
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-[15px]">Experience</h2>
-          <div className="mt-8 space-y-6">
-            {experiences.map((exp) => (
-              <div
-                key={exp.period}
-                className="flex items-start justify-between border-b border-border pb-6"
-              >
-                <div>
-                  <p className="text-[14px] font-medium">{exp.role}</p>
-                  <p className="text-[12px] text-muted">{exp.company}</p>
-                </div>
-                <p className="text-[12px] text-muted">{exp.period}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
