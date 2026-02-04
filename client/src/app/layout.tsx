@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={`${ibmPlexMono.variable} cursor-none font-mono antialiased`}
-      >
+      <body className={`${ibmPlexMono.variable} font-mono antialiased`}>
         <LoadingScreen />
         <CustomCursor />
         <Header />
