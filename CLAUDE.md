@@ -144,6 +144,7 @@
 - **ブランチ名**: 英語で作成（例: `feature/add-authentication`、`fix/user-login-error`）
 - **PRの言語**: タイトル・本文は日本語、コミットメッセージは英語
 - **PRテンプレート**: .github/pull_request_template.mdのテンプレートに沿って記載すること。特に記載がない場合は空欄で良い。
+- **PRのAssignees**: PRを作成したUserをアサインする
 - **環境設定**: `.env.sample`はコミット可能
 - **.env.sample修正時の必須対応**: `.env.sample`を修正した場合は、必ず環境変数を更新する
 

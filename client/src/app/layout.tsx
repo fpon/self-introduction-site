@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import { CustomCursor } from "@/components/CustomCursor";
 import { LoadingScreen } from "@/components/LoadingScreen";
-import { SmoothScroll } from "@/components/SmoothScroll";
 import { Footer } from "@/organisms/Footer";
 import { Header } from "@/organisms/Header";
 import "./globals.css";
@@ -30,11 +29,9 @@ export default function RootLayout({
       >
         <LoadingScreen />
         <CustomCursor />
-        <SmoothScroll>
-          <Header />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
