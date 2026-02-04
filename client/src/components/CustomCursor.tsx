@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -15,6 +16,10 @@ export function CustomCursor() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
@@ -38,19 +43,18 @@ export function CustomCursor() {
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
+      window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", moveCursor);
       observer.disconnect();
     };
   }, [cursorX, cursorY]);
 
-  if (typeof window !== "undefined" && window.innerWidth < 768) {
-    return null;
-  }
+  if (isMobile) return null;
 
   return (
     <>
       <motion.div
-        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden mix-blend-difference md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] mix-blend-difference"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
@@ -69,7 +73,7 @@ export function CustomCursor() {
         />
       </motion.div>
       <motion.div
-        className="pointer-events-none fixed left-0 top-0 z-[9998] hidden md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9998]"
         style={{
           x: cursorX,
           y: cursorY,
