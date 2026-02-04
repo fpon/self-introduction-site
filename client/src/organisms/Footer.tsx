@@ -1,19 +1,11 @@
-"use client";
-
 export function Footer() {
   return (
-    <footer className="border-t border-border px-6 py-8">
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <p className="text-xs text-muted">
+    <footer className="border-t border-border px-5 py-6">
+      <div className="flex items-center justify-between">
+        <p className="text-[11px] text-muted">
           &copy; {new Date().getFullYear()} Your Name
         </p>
-        <button
-          type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xs text-muted transition-colors hover:text-foreground"
-        >
-          Back to top ↑
-        </button>
+        <p className="text-[11px] text-muted">Software Engineer Portfolio</p>
       </div>
     </footer>
   );

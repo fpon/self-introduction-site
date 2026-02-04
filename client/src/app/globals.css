@@ -1,12 +1,12 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
 :root {
-  --background: #fafafa;
-  --foreground: #0a0a0a;
-  --muted: #71717a;
-  --border: #e4e4e7;
-  --accent: #18181b;
-  --hover: #f4f4f5;
+  --background: #f3f3ff;
+  --foreground: #101016;
+  --muted: #565656;
+  --border: #d0d0e0;
+  --accent: #101016;
 }
 
 @theme inline {
@@ -15,26 +15,27 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
-  --color-hover: var(--hover);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "IBM Plex Mono", monospace;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --muted: #a1a1aa;
-    --border: #27272a;
-    --accent: #fafafa;
-    --hover: #18181b;
+    --background: #101016;
+    --foreground: #f3f3ff;
+    --muted: #a0a0a0;
+    --border: #303040;
+    --accent: #f3f3ff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family:
+    "IBM Plex Mono", "Hiragino Kaku Gothic ProN", "Hiragino Sans", monospace;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 html {
@@ -44,29 +45,4 @@ html {
 ::selection {
   background: var(--foreground);
   color: var(--background);
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 0.6s ease-out forwards;
-}
-
-.animate-fade-up-delay-1 {
-  animation: fade-up 0.6s ease-out 0.1s forwards;
-  opacity: 0;
-}
-
-.animate-fade-up-delay-2 {
-  animation: fade-up 0.6s ease-out 0.2s forwards;
-  opacity: 0;
 }
