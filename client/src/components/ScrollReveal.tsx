@@ -11,12 +11,12 @@ type ScrollRevealProps = {
   direction?: "up" | "down" | "left" | "right";
 };
 
-export function ScrollReveal({
+export const ScrollReveal = ({
   children,
   className = "",
   delay = 0,
   direction = "up",
-}: ScrollRevealProps) {
+}: ScrollRevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -49,9 +49,9 @@ export function ScrollReveal({
       {children}
     </motion.div>
   );
-}
+};
 
-export function TextReveal({
+export const TextReveal = ({
   children,
   className = "",
   delay = 0,
@@ -59,7 +59,7 @@ export function TextReveal({
   children: string;
   className?: string;
   delay?: number;
-}) {
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -79,9 +79,9 @@ export function TextReveal({
       </motion.span>
     </span>
   );
-}
+};
 
-export function ParallaxSection({
+export const ParallaxSection = ({
   children,
   className = "",
   speed = 0.5,
@@ -89,7 +89,7 @@ export function ParallaxSection({
   children: ReactNode;
   className?: string;
   speed?: number;
-}) {
+}) => {
   const ref = useRef(null);
 
   return (
@@ -112,4 +112,4 @@ export function ParallaxSection({
       {children}
     </motion.div>
   );
-}
+};

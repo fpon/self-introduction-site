@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { works } from "@/components/brains/brains-works-section";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { works } from "@/organisms/WorksSection";
 
 const categories = [
   "All",

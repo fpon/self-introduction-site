@@ -27,7 +27,7 @@ const pageVariants: Variants = {
   },
 };
 
-export function PageTransition({ children }: { children: React.ReactNode }) {
+export const PageTransition = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
       initial="initial"
@@ -38,7 +38,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       {children}
     </motion.div>
   );
-}
+};
 
 export const fadeInUp: Variants = {
   initial: { opacity: 0, y: 40 },

@@ -3,7 +3,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function CustomCursor() {
+export const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
@@ -93,4 +93,4 @@ export function CustomCursor() {
       </motion.div>
     </>
   );
-}
+};

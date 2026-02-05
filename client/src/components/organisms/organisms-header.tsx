@@ -1,8 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const navItems = [
@@ -17,9 +14,11 @@ const socials = [
   { name: "Gh", href: "https://github.com", full: "GitHub" },
 ];
 
-export function Header() {
-  const pathname = usePathname();
+type OrganismsHeaderProps = {
+  pathname: string;
+};
 
+export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
   return (
     <motion.header
       className="fixed top-0 z-50 w-full mix-blend-difference"
@@ -75,4 +74,4 @@ export function Header() {
       </nav>
     </motion.header>
   );
-}
+};

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export function BackgroundEffects() {
+export const BackgroundEffects = () => {
   const { scrollYProgress } = useScroll();
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1]);
@@ -132,4 +132,4 @@ export function BackgroundEffects() {
       </svg>
     </div>
   );
-}
+};

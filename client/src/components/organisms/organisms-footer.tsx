@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MagneticButton } from "@/components/MagneticButton";
@@ -11,7 +9,11 @@ const footerLinks = [
   { label: "Management", href: "/management" },
 ];
 
-export function Footer() {
+type OrganismsFooterProps = {
+  onScrollToTop: () => void;
+};
+
+export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
   return (
     <footer className="border-t border-border">
       <div className="px-8 py-16">
@@ -38,7 +40,7 @@ export function Footer() {
           <MagneticButton>
             <button
               type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={onScrollToTop}
               className="flex items-center gap-2 text-[13px] text-muted transition-colors hover:text-foreground"
             >
               <motion.span
@@ -63,4 +65,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};

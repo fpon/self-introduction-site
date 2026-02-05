@@ -1,20 +1,20 @@
-"use client";
-
-import { motion, useScroll, useTransform } from "framer-motion";
+import type { MotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import type { RefObject } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 
-export function HeroSection() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
+type OrganismsHeroSectionProps = {
+  containerRef: RefObject<HTMLElement | null>;
+  y: MotionValue<number>;
+  opacity: MotionValue<number>;
+};
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
+export const OrganismsHeroSection = ({
+  containerRef,
+  y,
+  opacity,
+}: OrganismsHeroSectionProps) => {
   return (
     <section
       ref={containerRef}
@@ -207,4 +207,4 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
-}
+};
