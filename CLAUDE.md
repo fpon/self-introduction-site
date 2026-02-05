@@ -43,7 +43,8 @@
     - 作成したテストが保守に不要であれば削除
     - テスト実行は後のlint実行ステップで一括実行
 10. **commit + push実行とPR作成**: 自動実行（ユーザー確認不要）
-    - PRは`gh pr create --assignee @me`で作成（assignee必須）
+    - PRは`.github/pull_request_template.md`の形式で作成（独自フォーマット禁止）
+    - `gh pr create --assignee @me`で作成（assignee必須）
     - PR作成後`open [PR_URL]`でブラウザでPRを開く
 
 ---
@@ -145,10 +146,40 @@
 
 - **ブランチ名**: 英語で作成（例: `feature/add-authentication`、`fix/user-login-error`）
 - **PRの言語**: タイトル・本文は日本語、コミットメッセージは英語
-- **PRテンプレート**: .github/pull_request_template.mdのテンプレートに沿って記載すること。特に記載がない場合は空欄で良い。
+- **PRテンプレート（必須）**: 独自フォーマット禁止。必ず以下のテンプレート形式を使用すること
+  ```markdown
+  ## Issue
+  （関連するIssue番号があれば記載、なければ空欄）
+
+  ## Detail
+  （変更内容の詳細を記載）
+
+  ## Caution
+  （レビュアーへの注意事項があれば記載、なければ空欄）
+
+  ## References
+  （参考資料があれば記載、なければ空欄）
+
+  ## Design
+  （設計に関する説明があれば記載、なければ空欄）
+  ```
 - **PRのAssignees（必須）**: PR作成時に必ず`--assignee @me`オプションを付けて自分をアサインする
+- **PR作成コマンド例**:
   ```bash
-  gh pr create --title "タイトル" --body "本文" --assignee @me
+  gh pr create --title "PRタイトル" --body "$(cat <<'EOF'
+  ## Issue
+
+  ## Detail
+  変更内容をここに記載
+
+  ## Caution
+
+  ## References
+
+  ## Design
+
+  EOF
+  )" --assignee @me
   ```
 - **環境設定**: `.env.sample`はコミット可能
 - **.env.sample修正時の必須対応**: `.env.sample`を修正した場合は、必ず環境変数を更新する
