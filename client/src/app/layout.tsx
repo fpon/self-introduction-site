@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import { BackgroundEffects } from "@/components/BackgroundEffects";
 import { CustomCursor } from "@/components/CustomCursor";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { Footer } from "@/organisms/Footer";
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${ibmPlexMono.variable} font-mono antialiased`}>
         <LoadingScreen />
         <CustomCursor />
+        <BackgroundEffects />
         <Header />
         {children}
         <Footer />
