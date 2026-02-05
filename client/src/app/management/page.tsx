@@ -64,7 +64,7 @@ const resources = [
   },
 ];
 
-const ManagementPage = () => {
+export const ManagementPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredResources =

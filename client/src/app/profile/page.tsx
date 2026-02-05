@@ -55,7 +55,7 @@ const values = [
   },
 ];
 
-const ProfilePage = () => {
+export const ProfilePage = () => {
   return (
     <PageTransition>
       <main className="min-h-screen pt-32">

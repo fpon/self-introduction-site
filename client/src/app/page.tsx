@@ -4,7 +4,7 @@ import { BrainsHeroSection } from "@/components/brains/brains-hero-section";
 import { BrainsWorksSection } from "@/components/brains/brains-works-section";
 import { PageTransition } from "@/components/PageTransition";
 
-const Home = () => {
+export const Home = () => {
   return (
     <PageTransition>
       <main>

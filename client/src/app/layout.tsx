@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Creative Developer Portfolio - Building digital experiences",
 };
 
-const RootLayout = ({
+export const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;

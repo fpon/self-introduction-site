@@ -15,7 +15,7 @@ const categories = [
   "Dashboard",
 ];
 
-const WorksPage = () => {
+export const WorksPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredWorks =
