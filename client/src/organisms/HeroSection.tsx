@@ -34,6 +34,84 @@ export function HeroSection() {
         </motion.h1>
       </motion.div>
 
+      <motion.div
+        className="absolute left-8 top-32 hidden font-mono text-[10px] text-foreground/20 lg:block"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 3.2, duration: 0.8 }}
+      >
+        <div className="space-y-1">
+          <div className="text-foreground/40">{"// status"}</div>
+          <div>
+            available: <span className="text-green-500">true</span>
+          </div>
+          <div>location: Tokyo, JP</div>
+          <div>experience: 10+ years</div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-32 right-8 hidden font-mono text-[10px] text-foreground/20 lg:block"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 3.4, duration: 0.8 }}
+      >
+        <div className="text-right">
+          <div className="text-foreground/40">{"// coordinates"}</div>
+          <div>35.6762° N</div>
+          <div>139.6503° E</div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute right-8 top-32 hidden lg:block"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 3, duration: 0.8 }}
+      >
+        <svg
+          width="120"
+          height="120"
+          className="text-foreground/10"
+          aria-hidden="true"
+        >
+          <motion.rect
+            x="10"
+            y="10"
+            width="100"
+            height="100"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ delay: 3.2, duration: 1.5, ease: "easeInOut" }}
+          />
+          <motion.line
+            x1="10"
+            y1="10"
+            x2="110"
+            y2="110"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ delay: 3.5, duration: 1 }}
+          />
+          <motion.line
+            x1="110"
+            y1="10"
+            x2="10"
+            y2="110"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ delay: 3.7, duration: 1 }}
+          />
+        </svg>
+      </motion.div>
+
       <div className="relative z-10 px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
