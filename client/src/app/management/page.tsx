@@ -64,7 +64,7 @@ const resources = [
   },
 ];
 
-export default function ManagementPage() {
+const ManagementPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredResources =
@@ -184,4 +184,6 @@ export default function ManagementPage() {
       </main>
     </PageTransition>
   );
-}
+};
+
+export default ManagementPage;

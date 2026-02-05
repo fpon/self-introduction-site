@@ -43,7 +43,7 @@ export const works = [
   },
 ];
 
-export function WorksSection() {
+export const WorksSection = () => {
   return (
     <section className="py-32">
       <div className="px-8">
@@ -116,4 +116,4 @@ export function WorksSection() {
       </div>
     </section>
   );
-}
+};

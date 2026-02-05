@@ -11,7 +11,7 @@ const socials = [
   { name: "Instagram", href: "https://instagram.com" },
 ];
 
-export function ContactSection() {
+export const ContactSection = () => {
   return (
     <section className="relative overflow-hidden py-32">
       <div className="px-8">
@@ -76,4 +76,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+};

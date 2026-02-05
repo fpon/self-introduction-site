@@ -9,10 +9,10 @@ type MagneticButtonProps = {
   className?: string;
 };
 
-export function MagneticButton({
+export const MagneticButton = ({
   children,
   className = "",
-}: MagneticButtonProps) {
+}: MagneticButtonProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -46,4 +46,4 @@ export function MagneticButton({
       {children}
     </motion.div>
   );
-}
+};

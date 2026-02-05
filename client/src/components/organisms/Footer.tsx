@@ -11,7 +11,7 @@ const footerLinks = [
   { label: "Management", href: "/management" },
 ];
 
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className="border-t border-border">
       <div className="px-8 py-16">
@@ -63,4 +63,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};

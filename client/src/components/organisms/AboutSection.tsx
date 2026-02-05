@@ -14,7 +14,7 @@ const skills = [
   { name: "Team Management", level: 85 },
 ];
 
-export function AboutSection() {
+export const AboutSection = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -106,4 +106,4 @@ export function AboutSection() {
       </div>
     </section>
   );
-}
+};

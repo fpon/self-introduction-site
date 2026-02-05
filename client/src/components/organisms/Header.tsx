@@ -17,7 +17,7 @@ const socials = [
   { name: "Gh", href: "https://github.com", full: "GitHub" },
 ];
 
-export function Header() {
+export const Header = () => {
   const pathname = usePathname();
 
   return (
@@ -75,4 +75,4 @@ export function Header() {
       </nav>
     </motion.header>
   );
-}
+};

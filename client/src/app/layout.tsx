@@ -3,8 +3,8 @@ import { IBM_Plex_Mono } from "next/font/google";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
 import { CustomCursor } from "@/components/CustomCursor";
 import { LoadingScreen } from "@/components/LoadingScreen";
-import { Footer } from "@/organisms/Footer";
-import { Header } from "@/organisms/Header";
+import { Footer } from "@/components/organisms/Footer";
+import { Header } from "@/components/organisms/Header";
 import "./globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "Creative Developer Portfolio - Building digital experiences",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="ja">
       <body className={`${ibmPlexMono.variable} font-mono antialiased`}>
@@ -35,4 +35,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

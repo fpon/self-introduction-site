@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function LoadingScreen() {
+export const LoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -59,4 +59,4 @@ export function LoadingScreen() {
       )}
     </AnimatePresence>
   );
-}
+};

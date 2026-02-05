@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 
-export function HeroSection() {
+export const HeroSection = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -207,4 +207,4 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
-}
+};
