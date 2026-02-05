@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -11,7 +9,7 @@ const socials = [
   { name: "Instagram", href: "https://instagram.com" },
 ];
 
-export const ContactSection = () => {
+export const OrganismsContactSection = () => {
   return (
     <section className="relative overflow-hidden py-32">
       <div className="px-8">

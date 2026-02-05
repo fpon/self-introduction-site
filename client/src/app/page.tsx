@@ -1,17 +1,17 @@
-import { AboutSection } from "@/components/organisms/AboutSection";
-import { ContactSection } from "@/components/organisms/ContactSection";
-import { HeroSection } from "@/components/organisms/HeroSection";
-import { WorksSection } from "@/components/organisms/WorksSection";
+import { BrainsAboutSection } from "@/components/brains/brains-about-section";
+import { BrainsContactSection } from "@/components/brains/brains-contact-section";
+import { BrainsHeroSection } from "@/components/brains/brains-hero-section";
+import { BrainsWorksSection } from "@/components/brains/brains-works-section";
 import { PageTransition } from "@/components/PageTransition";
 
 const Home = () => {
   return (
     <PageTransition>
       <main>
-        <HeroSection />
-        <WorksSection />
-        <AboutSection />
-        <ContactSection />
+        <BrainsHeroSection />
+        <BrainsWorksSection />
+        <BrainsAboutSection />
+        <BrainsContactSection />
       </main>
     </PageTransition>
   );

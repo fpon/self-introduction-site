@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -43,7 +41,7 @@ export const works = [
   },
 ];
 
-export const WorksSection = () => {
+export const OrganismsWorksSection = () => {
   return (
     <section className="py-32">
       <div className="px-8">

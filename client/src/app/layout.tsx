@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
+import { BrainsFooter } from "@/components/brains/brains-footer";
+import { BrainsHeader } from "@/components/brains/brains-header";
 import { CustomCursor } from "@/components/CustomCursor";
 import { LoadingScreen } from "@/components/LoadingScreen";
-import { Footer } from "@/components/organisms/Footer";
-import { Header } from "@/components/organisms/Header";
 import "./globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -29,9 +29,9 @@ const RootLayout = ({
         <LoadingScreen />
         <CustomCursor />
         <BackgroundEffects />
-        <Header />
+        <BrainsHeader />
         {children}
-        <Footer />
+        <BrainsFooter />
       </body>
     </html>
   );

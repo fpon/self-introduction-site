@@ -1,8 +1,7 @@
-"use client";
-
-import { motion, useScroll, useTransform } from "framer-motion";
+import type { MotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import type { RefObject } from "react";
 import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
 const skills = [
@@ -14,15 +13,15 @@ const skills = [
   { name: "Team Management", level: 85 },
 ];
 
-export const AboutSection = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+type OrganismsAboutSectionProps = {
+  containerRef: RefObject<HTMLElement | null>;
+  x: MotionValue<string>;
+};
 
-  const x = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
+export const OrganismsAboutSection = ({
+  containerRef,
+  x,
+}: OrganismsAboutSectionProps) => {
   return (
     <section ref={containerRef} className="relative overflow-hidden py-32">
       <motion.div
