@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "Creative Developer Portfolio - Building digital experiences",
 };
 
-export const RootLayout = ({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) => {
+}>) {
   return (
     <html lang="ja">
       <body className={`${ibmPlexMono.variable} font-mono antialiased`}>
@@ -35,6 +35,4 @@ export const RootLayout = ({
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

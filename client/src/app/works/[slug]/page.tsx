@@ -7,7 +7,7 @@ import { works } from "@/components/brains/brains-works-section";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-export const WorkDetailPage = () => {
+export default function WorkDetailPage() {
   const params = useParams();
   const work = works.find((w) => w.id === params.slug);
 
@@ -161,6 +161,4 @@ export const WorkDetailPage = () => {
       </main>
     </PageTransition>
   );
-};
-
-export default WorkDetailPage;
+}

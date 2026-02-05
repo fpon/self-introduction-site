@@ -4,7 +4,7 @@ import { BrainsHeroSection } from "@/components/brains/brains-hero-section";
 import { BrainsWorksSection } from "@/components/brains/brains-works-section";
 import { PageTransition } from "@/components/PageTransition";
 
-export const Home = () => {
+export default function Home() {
   return (
     <PageTransition>
       <main>
@@ -15,6 +15,4 @@ export const Home = () => {
       </main>
     </PageTransition>
   );
-};
-
-export default Home;
+}
