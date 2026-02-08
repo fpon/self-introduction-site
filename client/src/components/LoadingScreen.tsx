@@ -3,16 +3,28 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const LOADING_SHOWN_KEY = "loadingShown";
+
 export const LoadingScreen = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      sessionStorage.getItem(LOADING_SHOWN_KEY)
+    )
+      return;
+
+    setIsLoading(true);
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setIsLoading(false), 500);
+          setTimeout(() => {
+            setIsLoading(false);
+            sessionStorage.setItem(LOADING_SHOWN_KEY, "true");
+          }, 500);
           return 100;
         }
         return prev + Math.random() * 15;
