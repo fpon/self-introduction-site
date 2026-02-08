@@ -51,9 +51,9 @@ export const OrganismsHeroSection = ({
           transition={{ duration: 0.8, delay: 2 }}
           className="mb-4"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-terminal-cyan/30 bg-terminal-cyan/5 px-4 py-1 text-[11px] uppercase tracking-widest text-terminal-cyan">
+          <span className="inline-flex items-center gap-2 rounded-full border border-dracula-purple/30 bg-dracula-purple/5 px-4 py-1 text-[11px] uppercase tracking-widest text-dracula-purple">
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-terminal-green"
+              className="h-1.5 w-1.5 rounded-full bg-dracula-green"
               animate={{ opacity: [1, 0.3, 1] }}
               transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
             />
@@ -88,7 +88,7 @@ export const OrganismsHeroSection = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 2.8 }}
         >
-          <span className="text-terminal-green">$</span>
+          <span className="text-dracula-green">$</span>
           <TypewriterText
             texts={terminalCommands}
             typingSpeed={80}
@@ -116,7 +116,7 @@ export const OrganismsHeroSection = ({
           <MagneticButton>
             <Link
               href="/works"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-terminal-cyan bg-terminal-cyan/10 px-8 py-4 text-[13px] font-medium text-foreground transition-all hover:bg-terminal-cyan hover:text-background"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-dracula-purple bg-dracula-purple/10 px-8 py-4 text-[13px] font-medium text-foreground transition-all hover:bg-dracula-purple hover:text-background"
             >
               <span className="relative z-10">View Works</span>
               <motion.span
@@ -131,7 +131,7 @@ export const OrganismsHeroSection = ({
           <MagneticButton>
             <Link
               href="/profile"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:border-terminal-cyan hover:text-terminal-cyan"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:border-dracula-purple hover:text-dracula-purple"
             >
               About Me
             </Link>
@@ -153,7 +153,7 @@ export const OrganismsHeroSection = ({
           <span className="text-[10px] uppercase tracking-widest text-muted">
             Scroll
           </span>
-          <div className="h-12 w-px bg-gradient-to-b from-terminal-cyan to-transparent" />
+          <div className="h-12 w-px bg-gradient-to-b from-dracula-purple to-transparent" />
         </motion.div>
       </motion.div>
     </section>

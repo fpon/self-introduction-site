@@ -1,46 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3f3ff;
-  --foreground: #101016;
-  --muted: #565656;
-  --border: #d0d0e0;
-  --accent: #101016;
-  --hover: #e8e8f8;
-  --terminal-green: #00ff9f;
-  --terminal-cyan: #00d4ff;
-  --terminal-magenta: #ff00ff;
-  --terminal-yellow: #ffcc00;
+  --background: #282a36;
+  --background-secondary: #44475a;
+  --foreground: #f8f8f2;
+  --muted: #6272a4;
+  --border: #44475a;
+  --accent: #bd93f9;
+  --hover: #44475a;
+  --dracula-cyan: #8be9fd;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-purple: #bd93f9;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-hover: var(--hover);
-  --color-terminal-green: var(--terminal-green);
-  --color-terminal-cyan: var(--terminal-cyan);
-  --color-terminal-magenta: var(--terminal-magenta);
-  --color-terminal-yellow: var(--terminal-yellow);
+  --color-dracula-cyan: var(--dracula-cyan);
+  --color-dracula-green: var(--dracula-green);
+  --color-dracula-orange: var(--dracula-orange);
+  --color-dracula-pink: var(--dracula-pink);
+  --color-dracula-purple: var(--dracula-purple);
+  --color-dracula-red: var(--dracula-red);
+  --color-dracula-yellow: var(--dracula-yellow);
   --font-sans: var(--font-ibm-plex-mono);
   --font-mono: var(--font-ibm-plex-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #101016;
-    --foreground: #f3f3ff;
-    --muted: #a0a0a0;
-    --border: #303040;
-    --accent: #f3f3ff;
-    --hover: #1a1a24;
-    --terminal-green: #00ff9f;
-    --terminal-cyan: #00d4ff;
-    --terminal-magenta: #ff00ff;
-    --terminal-yellow: #ffcc00;
-  }
 }
 
 body {
@@ -175,14 +168,14 @@ html {
 
 .glitch-text::before {
   left: 2px;
-  text-shadow: -2px 0 var(--terminal-cyan);
+  text-shadow: -2px 0 var(--dracula-cyan);
   clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
   animation: glitch-skew 3s infinite linear alternate-reverse;
 }
 
 .glitch-text::after {
   left: -2px;
-  text-shadow: -2px 0 var(--terminal-magenta);
+  text-shadow: -2px 0 var(--dracula-pink);
   clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
   animation: glitch-skew 2s infinite linear alternate-reverse;
 }

@@ -28,9 +28,9 @@ export const GlitchText = ({
       animate={{
         textShadow: [
           "0 0 0 transparent",
-          `${offset}px 0 0 var(--terminal-cyan), -${offset}px 0 0 var(--terminal-magenta)`,
+          `${offset}px 0 0 var(--dracula-cyan), -${offset}px 0 0 var(--dracula-pink)`,
           "0 0 0 transparent",
-          `-${offset}px 0 0 var(--terminal-cyan), ${offset}px 0 0 var(--terminal-magenta)`,
+          `-${offset}px 0 0 var(--dracula-cyan), ${offset}px 0 0 var(--dracula-pink)`,
           "0 0 0 transparent",
         ],
       }}

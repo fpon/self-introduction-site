@@ -76,7 +76,7 @@ export const CustomCursor = () => {
           transition={{ duration: 0.1 }}
         >
           <motion.div
-            className="absolute rounded-sm bg-terminal-cyan"
+            className="absolute rounded-sm bg-dracula-pink"
             animate={{
               width: isHovering ? 40 : 2,
               height: isHovering ? 40 : 20,
@@ -93,8 +93,8 @@ export const CustomCursor = () => {
             }}
             style={{
               boxShadow: isHovering
-                ? "0 0 20px var(--terminal-cyan), 0 0 40px var(--terminal-cyan)"
-                : "0 0 8px var(--terminal-cyan), 0 0 16px var(--terminal-cyan)",
+                ? "0 0 20px var(--dracula-pink), 0 0 40px var(--dracula-pink)"
+                : "0 0 8px var(--dracula-pink), 0 0 16px var(--dracula-pink)",
             }}
           />
           {isHovering && (
@@ -117,7 +117,7 @@ export const CustomCursor = () => {
         }}
       >
         <motion.div
-          className="rounded-full border border-terminal-cyan/30"
+          className="rounded-full border border-dracula-pink/30"
           animate={{
             width: isHovering ? 60 : 32,
             height: isHovering ? 60 : 32,
@@ -127,7 +127,7 @@ export const CustomCursor = () => {
           }}
           transition={{ duration: 0.3, delay: 0.02 }}
           style={{
-            boxShadow: "0 0 10px var(--terminal-cyan)",
+            boxShadow: "0 0 10px var(--dracula-pink)",
           }}
         />
       </motion.div>

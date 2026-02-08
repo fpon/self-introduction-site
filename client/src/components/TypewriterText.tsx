@@ -59,7 +59,7 @@ export const TypewriterText = ({
     <span className={`inline-flex items-center ${className}`}>
       <span>{displayText}</span>
       <motion.span
-        className="ml-0.5 inline-block h-[1em] w-[2px] bg-terminal-cyan"
+        className="ml-0.5 inline-block h-[1em] w-[2px] bg-dracula-green"
         animate={{ opacity: [1, 0] }}
         transition={{
           duration: 0.6,
@@ -67,7 +67,7 @@ export const TypewriterText = ({
           repeatType: "reverse",
         }}
         style={{
-          boxShadow: "0 0 4px var(--terminal-cyan)",
+          boxShadow: "0 0 4px var(--dracula-green)",
         }}
       />
     </span>
