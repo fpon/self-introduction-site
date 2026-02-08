@@ -1,13 +1,14 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LOADING_SHOWN_KEY = "loadingShown";
 
 export const LoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (
@@ -17,21 +18,30 @@ export const LoadingScreen = () => {
       return;
 
     setIsLoading(true);
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
+        const next = prev + Math.random() * 15;
+        if (next >= 100) {
+          if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+          }
           setTimeout(() => {
             setIsLoading(false);
             sessionStorage.setItem(LOADING_SHOWN_KEY, "true");
           }, 500);
           return 100;
         }
-        return prev + Math.random() * 15;
+        return next;
       });
     }, 100);
 
-    return () => clearInterval(interval);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
   }, []);
 
   return (
