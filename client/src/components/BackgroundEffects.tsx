@@ -2,39 +2,6 @@
 
 import { motion } from "framer-motion";
 
-type TerminalWindowProps = {
-  children: React.ReactNode;
-  className?: string;
-  title?: string;
-  delay?: number;
-};
-
-const TerminalWindow = ({
-  children,
-  className = "",
-  title = "terminal",
-  delay = 0,
-}: TerminalWindowProps) => {
-  return (
-    <motion.div
-      className={`terminal-window ${className}`}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5 }}
-    >
-      <div className="terminal-window-header">
-        <div className="terminal-dot terminal-dot-red" />
-        <div className="terminal-dot terminal-dot-yellow" />
-        <div className="terminal-dot terminal-dot-green" />
-        <span className="ml-2 text-[9px] text-muted">{title}</span>
-      </div>
-      <div className="p-3 font-mono text-[10px] text-foreground/15">
-        {children}
-      </div>
-    </motion.div>
-  );
-};
-
 export const BackgroundEffects = () => {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden scanline-overlay">
@@ -49,259 +16,208 @@ export const BackgroundEffects = () => {
         <div className="h-full w-full rotate-45 border border-terminal-magenta/5" />
       </div>
 
-      <div className="absolute left-4 top-[12%]">
-        <TerminalWindow title="types.ts" delay={2}>
-          <div className="space-y-0.5">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.2 }}
-            >
-              <span className="text-terminal-magenta/40">type</span>{" "}
-              <span className="text-terminal-cyan/40">Result</span>
-              {"<T, E> ="}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.4 }}
-            >
-              {"  | { ok: "}
-              <span className="text-terminal-green/40">true</span>
-              {"; value: T }"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.6 }}
-            >
-              {"  | { ok: "}
-              <span className="text-terminal-magenta/40">false</span>
-              {"; error: E };"}
-            </motion.div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute left-6 top-[15%] font-mono text-[10px] text-foreground/15">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.2 }}
+          >
+            {"type Result<T, E> ="}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.4 }}
+          >
+            {"  | { ok: true; value: T }"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.6 }}
+          >
+            {"  | { ok: false; error: E };"}
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="absolute right-4 top-[18%]">
-        <TerminalWindow title="config.ts" delay={2.5}>
-          <div className="space-y-0.5">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.7 }}
-            >
-              <span className="text-terminal-magenta/40">const</span>
-              {" config = {"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.9 }}
-            >
-              {"  runtime: "}
-              <span className="text-terminal-yellow/40">'edge'</span>,
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 3.1 }}
-            >
-              {"  regions: ["}
-              <span className="text-terminal-yellow/40">'nrt1'</span>
-              {"],"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 3.3 }}
-            >
-              {"} "}
-              <span className="text-terminal-magenta/40">satisfies</span>
-              {" Config;"}
-            </motion.div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute right-8 top-[20%] font-mono text-[10px] text-foreground/15">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2.5, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.7 }}
+          >
+            {"const config = {"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.9 }}
+          >
+            {"  runtime: 'edge',"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.1 }}
+          >
+            {"  regions: ['nrt1'],"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.3 }}
+          >
+            {"} satisfies Config;"}
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="absolute left-4 top-[42%]">
-        <TerminalWindow title="api.ts" delay={3.5}>
-          <div className="space-y-0.5">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 3.7 }}
-            >
-              <span className="text-terminal-magenta/40">const</span>
-              {" res = "}
-              <span className="text-terminal-magenta/40">await</span>
-              {" fetch(url);"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 3.9 }}
-            >
-              <span className="text-terminal-magenta/40">if</span>
-              {" (!res.ok) {"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.1 }}
-            >
-              {"  "}
-              <span className="text-terminal-magenta/40">throw new</span>
-              {" HTTPError(res);"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.3 }}
-            >
-              {"}"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.5 }}
-            >
-              <span className="text-terminal-magenta/40">return</span>
-              {" res.json() "}
-              <span className="text-terminal-magenta/40">as</span>
-              {" Promise<T>;"}
-            </motion.div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute left-8 top-[45%] font-mono text-[10px] text-foreground/15">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3.5, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.7 }}
+          >
+            {"const res = await fetch(url);"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.9 }}
+          >
+            {"if (!res.ok) {"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.1 }}
+          >
+            {"  throw new HTTPError(res);"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.3 }}
+          >
+            {"}"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.5 }}
+          >
+            {"return res.json() as Promise<T>;"}
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="absolute right-4 top-[50%]">
-        <TerminalWindow title="brand.ts" delay={4}>
-          <div className="space-y-0.5">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.2 }}
-            >
-              <span className="text-terminal-magenta/40">type</span>{" "}
-              <span className="text-terminal-cyan/40">Brand</span>
-              {"<T, B> ="}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.4 }}
-            >
-              {"  T & { __brand: B };"}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.6 }}
-            >
-              <span className="text-terminal-magenta/40">type</span>{" "}
-              <span className="text-terminal-cyan/40">UserId</span>
-              {" ="}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 4.8 }}
-            >
-              {"  Brand<"}
-              <span className="text-terminal-cyan/40">string</span>
-              {", "}
-              <span className="text-terminal-yellow/40">'UserId'</span>
-              {">;"}
-            </motion.div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute right-6 top-[55%] font-mono text-[10px] text-foreground/15">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 4, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.2 }}
+          >
+            {"type Brand<T, B> ="}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.4 }}
+          >
+            {"  T & { __brand: B };"}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.6 }}
+          >
+            {"type UserId ="}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.8 }}
+          >
+            {"  Brand<string, 'UserId'>;"}
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-[32%] left-4">
-        <TerminalWindow title="action.ts" delay={4.5}>
-          <div className="space-y-0.5">
-            <div className="text-muted/40">{"// Discriminated Union"}</div>
-            <div>
-              <span className="text-terminal-magenta/40">type</span>{" "}
-              <span className="text-terminal-cyan/40">Action</span>
-              {" ="}
-            </div>
-            <div>
-              {"  | { type: "}
-              <span className="text-terminal-yellow/40">'increment'</span>
-              {" }"}
-            </div>
-            <div>
-              {"  | { type: "}
-              <span className="text-terminal-yellow/40">'set'</span>
-              {"; value: "}
-              <span className="text-terminal-cyan/40">number</span>
-              {" };"}
-            </div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute bottom-[28%] left-6 font-mono text-[9px] text-foreground/12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 4.5, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <div>{"// Discriminated Union"}</div>
+          <div>{"type Action ="}</div>
+          <div>{"  | { type: 'increment' }"}</div>
+          <div>{"  | { type: 'set'; value: number };"}</div>
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-[24%] right-4">
-        <TerminalWindow title="schema.ts" delay={5.5}>
-          <div className="space-y-0.5">
-            <div>
-              <span className="text-terminal-magenta/40">const</span>
-              {" schema = z.object({"}
-            </div>
-            <div>
-              {"  id: z.string()."}
-              <span className="text-terminal-cyan/40">uuid</span>
-              {"(),"}
-            </div>
-            <div>
-              {"  createdAt: z.coerce."}
-              <span className="text-terminal-cyan/40">date</span>
-              {"(),"}
-            </div>
-            <div>{"});"}</div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute bottom-[20%] right-8 font-mono text-[9px] text-foreground/12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 5.5, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <div>{"const schema = z.object({"}</div>
+          <div>{"  id: z.string().uuid(),"}</div>
+          <div>{"  createdAt: z.coerce.date(),"}</div>
+          <div>{"});"}</div>
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-[12%] left-4">
-        <TerminalWindow title="zsh" delay={6}>
-          <div className="space-y-1">
-            <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 6.2, duration: 0.5 }}
-              className="flex items-center gap-2"
-            >
-              <span className="text-terminal-green/60">$</span>
-              <span>bun run build</span>
-              <motion.span
-                className="h-3 w-1.5 bg-terminal-cyan/40"
-                animate={{ opacity: [1, 0] }}
-                transition={{ duration: 0.6, repeat: 3, repeatType: "reverse" }}
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 6.8, duration: 0.5 }}
-              className="flex items-center gap-2"
-            >
-              <span className="text-terminal-green/60">$</span>
-              <span>bun test --coverage</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 7.4, duration: 0.5 }}
-              className="flex items-center gap-2"
-            >
-              <span className="text-terminal-green/60">$</span>
-              <span>turbo run lint --filter=...</span>
-            </motion.div>
-          </div>
-        </TerminalWindow>
+      <div className="absolute left-[15%] top-[70%] font-mono text-[9px] text-foreground/12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 5, duration: 1 }}
+          className="space-y-0.5"
+        >
+          <div>{"const routes = ["}</div>
+          <div>{"  '/api/users/:id',"}</div>
+          <div>{"  '/api/posts/*',"}</div>
+          <div>{"] as const;"}</div>
+        </motion.div>
+      </div>
+
+      <div className="absolute right-[20%] top-[75%] font-mono text-[9px] text-foreground/10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 5.8, duration: 1 }}
+        >
+          {"data ?? fallback"}
+        </motion.div>
       </div>
 
       <div className="absolute left-[40%] top-[35%] font-mono text-[8px] text-foreground/10">
@@ -309,12 +225,11 @@ export const BackgroundEffects = () => {
           animate={{ opacity: [0.1, 0.25, 0.1] }}
           transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
         >
-          <span className="text-terminal-cyan/30">Record</span>
-          {"<string, unknown>"}
+          {"Record<string, unknown>"}
         </motion.div>
       </div>
 
-      <div className="absolute right-[15%] top-[35%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute right-[10%] top-[32%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.1, 0.2, 0.1] }}
           transition={{
@@ -323,12 +238,11 @@ export const BackgroundEffects = () => {
             delay: 1,
           }}
         >
-          <span className="text-terminal-cyan/30">Awaited</span>
-          {"<ReturnType<typeof fn>>"}
+          {"Awaited<ReturnType<typeof fn>>"}
         </motion.div>
       </div>
 
-      <div className="absolute left-[55%] top-[28%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute left-[60%] top-[25%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.08, 0.2, 0.08] }}
           transition={{
@@ -337,8 +251,7 @@ export const BackgroundEffects = () => {
             delay: 2,
           }}
         >
-          <span className="text-terminal-cyan/30">Partial</span>
-          {"<Omit<T, 'id'>>"}
+          {"Partial<Omit<T, 'id'>>"}
         </motion.div>
       </div>
 
@@ -351,14 +264,11 @@ export const BackgroundEffects = () => {
             delay: 0.5,
           }}
         >
-          <span className="text-terminal-magenta/30">import</span>
-          {" { Hono } "}
-          <span className="text-terminal-magenta/30">from</span>
-          {" 'hono'"}
+          {"import { Hono } from 'hono'"}
         </motion.div>
       </div>
 
-      <div className="absolute bottom-[45%] right-[18%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute right-[15%] bottom-[45%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.1, 0.2, 0.1] }}
           transition={{
@@ -367,11 +277,11 @@ export const BackgroundEffects = () => {
             delay: 1.5,
           }}
         >
-          <span className="text-terminal-yellow/30">@ts-expect-error</span>
+          {"@ts-expect-error"}
         </motion.div>
       </div>
 
-      <div className="absolute bottom-[60%] left-[25%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute left-[25%] bottom-[60%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.08, 0.18, 0.08] }}
           transition={{
@@ -380,11 +290,11 @@ export const BackgroundEffects = () => {
             delay: 3,
           }}
         >
-          <span className="text-muted/30">{"// biome-ignore lint:"}</span>
+          {"// biome-ignore lint:"}
         </motion.div>
       </div>
 
-      <div className="absolute left-[65%] top-[60%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute left-[70%] top-[60%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.08, 0.18, 0.08] }}
           transition={{
@@ -393,11 +303,11 @@ export const BackgroundEffects = () => {
             delay: 2.5,
           }}
         >
-          <span className="text-terminal-green/30">$</span> bun add -d
+          {"bun add -d"}
         </motion.div>
       </div>
 
-      <div className="absolute bottom-[40%] left-[50%] font-mono text-[8px] text-foreground/10">
+      <div className="absolute left-[55%] bottom-[40%] font-mono text-[8px] text-foreground/10">
         <motion.div
           animate={{ opacity: [0.08, 0.15, 0.08] }}
           transition={{
@@ -406,8 +316,7 @@ export const BackgroundEffects = () => {
             delay: 1.8,
           }}
         >
-          <span className="text-terminal-cyan/30">NoInfer</span>
-          {"<T>"}
+          {"NoInfer<T>"}
         </motion.div>
       </div>
 
@@ -423,7 +332,31 @@ export const BackgroundEffects = () => {
         ))}
       </div>
 
-      <div className="absolute right-16 top-[8%] font-mono text-[7px] text-foreground/10">
+      <div className="absolute bottom-[12%] left-12 font-mono text-[8px] text-foreground/12">
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 6, duration: 0.5 }}
+        >
+          $ bun run build
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 6.5, duration: 0.5 }}
+        >
+          $ bun test --coverage
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 7, duration: 0.5 }}
+        >
+          $ turbo run lint --filter=...
+        </motion.div>
+      </div>
+
+      <div className="absolute right-16 top-[10%] font-mono text-[7px] text-foreground/10">
         {["01001000", "01100101", "01101100", "01101111", "00100001"].map(
           (binary, binaryIndex) => (
             <motion.div
@@ -435,7 +368,6 @@ export const BackgroundEffects = () => {
                 duration: 3,
                 repeat: Number.POSITIVE_INFINITY,
               }}
-              className="text-terminal-green/30"
             >
               {binary}
             </motion.div>
