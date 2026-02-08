@@ -28,7 +28,7 @@ export default function WorksPage() {
       <main className="min-h-screen pt-32">
         <div className="px-8">
           <ScrollReveal>
-            <span className="text-[11px] uppercase tracking-widest text-muted">
+            <span className="text-[11px] uppercase tracking-widest text-foreground/70">
               Portfolio
             </span>
             <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
@@ -46,7 +46,7 @@ export default function WorksPage() {
                   className={`rounded-full border px-6 py-2 text-[12px] transition-all ${
                     activeCategory === cat
                       ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted hover:border-foreground hover:text-foreground"
+                      : "border-border text-foreground/70 hover:border-foreground hover:text-foreground"
                   }`}
                 >
                   {cat}
@@ -82,12 +82,14 @@ export default function WorksPage() {
                     </div>
                   </motion.div>
                   <div className="mt-4">
-                    <p className="text-[14px] text-muted">{work.description}</p>
+                    <p className="text-[14px] text-foreground/70">
+                      {work.description}
+                    </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {work.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-border px-3 py-1 text-[11px] text-muted"
+                          className="rounded-full border border-border px-3 py-1 text-[11px] text-foreground/70"
                         >
                           {tag}
                         </span>

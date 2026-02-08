@@ -78,7 +78,7 @@ export default function ManagementPage() {
         <section className="px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-muted">
+              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
                 Resources
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
@@ -87,7 +87,7 @@ export default function ManagementPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-muted">
+              <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-foreground/70">
                 マネジメントに関する学習のアウトプットをまとめています。
                 チームビルディング、1on1、フィードバックなど、
                 実践で得た知見を共有しています。
@@ -104,7 +104,7 @@ export default function ManagementPage() {
                     className={`rounded-full border px-5 py-2 text-[12px] transition-all ${
                       activeCategory === cat
                         ? "border-foreground bg-foreground text-background"
-                        : "border-border text-muted hover:border-foreground hover:text-foreground"
+                        : "border-border text-foreground/70 hover:border-foreground hover:text-foreground"
                     }`}
                   >
                     {cat}
@@ -126,25 +126,25 @@ export default function ManagementPage() {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="md:col-span-2">
-                      <span className="text-[12px] text-muted">
+                      <span className="text-[12px] text-foreground/70">
                         {resource.date}
                       </span>
                     </div>
                     <div className="md:col-span-7">
                       <div className="flex items-center gap-3">
-                        <h3 className="text-[18px] font-medium transition-colors group-hover:text-muted">
+                        <h3 className="text-[18px] font-medium transition-colors group-hover:text-foreground/70">
                           {resource.title}
                         </h3>
-                        <span className="rounded-full border border-border px-2 py-0.5 text-[10px] text-muted">
+                        <span className="rounded-full border border-border px-2 py-0.5 text-[10px] text-foreground/70">
                           {resource.type}
                         </span>
                       </div>
-                      <p className="mt-2 text-[13px] leading-relaxed text-muted">
+                      <p className="mt-2 text-[13px] leading-relaxed text-foreground/70">
                         {resource.description}
                       </p>
                     </div>
                     <div className="flex items-center justify-end md:col-span-3">
-                      <span className="text-[12px] text-muted">
+                      <span className="text-[12px] text-foreground/70">
                         {resource.category}
                       </span>
                       <motion.span
@@ -168,7 +168,7 @@ export default function ManagementPage() {
               <h2 className="text-[clamp(2rem,6vw,4rem)] font-bold leading-tight tracking-tighter">
                 Share Your Thoughts
               </h2>
-              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-muted">
+              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/70">
                 資料に関するご質問やフィードバックがあれば、
                 お気軽にご連絡ください。
               </p>

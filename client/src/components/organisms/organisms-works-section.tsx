@@ -48,7 +48,7 @@ export const OrganismsWorksSection = () => {
         <ScrollReveal>
           <div className="flex items-end justify-between">
             <div>
-              <span className="text-[11px] uppercase tracking-widest text-muted">
+              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
                 Featured Works
               </span>
               <h2 className="mt-2 text-[clamp(2rem,8vw,5rem)] font-bold leading-none tracking-tighter">
@@ -59,7 +59,7 @@ export const OrganismsWorksSection = () => {
             </div>
             <Link
               href="/works"
-              className="hidden text-[13px] text-muted transition-colors hover:text-foreground md:block"
+              className="hidden text-[13px] text-foreground/70 transition-colors hover:text-foreground md:block"
             >
               View All →
             </Link>
@@ -82,19 +82,19 @@ export const OrganismsWorksSection = () => {
                         style={{ backgroundColor: work.color }}
                       />
                       <div>
-                        <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold tracking-tight transition-colors group-hover:text-muted">
+                        <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold tracking-tight transition-colors group-hover:text-foreground/70">
                           {work.title}
                         </h3>
-                        <p className="mt-1 text-[13px] text-muted">
+                        <p className="mt-1 text-[13px] text-foreground/70">
                           {work.description}
                         </p>
                       </div>
                     </div>
                     <div className="hidden items-center gap-8 md:flex">
-                      <span className="text-[13px] text-muted">
+                      <span className="text-[13px] text-foreground/70">
                         {work.category}
                       </span>
-                      <span className="text-[13px] text-muted">
+                      <span className="text-[13px] text-foreground/70">
                         {work.year}
                       </span>
                       <motion.span

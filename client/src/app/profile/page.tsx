@@ -62,7 +62,7 @@ export default function ProfilePage() {
         <section className="px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-muted">
+              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
                 About Me
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
@@ -78,7 +78,7 @@ export default function ProfilePage() {
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
-                <p className="text-[15px] leading-relaxed text-muted">
+                <p className="text-[15px] leading-relaxed text-foreground/70">
                   現在はテックリードとして、チームの技術的な意思決定をリードしながら、
                   自らも手を動かしてプロダクト開発に携わっています。
                   ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
@@ -92,7 +92,7 @@ export default function ProfilePage() {
         <section className="mt-32 px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <h2 className="text-[11px] uppercase tracking-widest text-muted">
+              <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
                 Experience
               </h2>
             </ScrollReveal>
@@ -106,16 +106,16 @@ export default function ProfilePage() {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="md:col-span-3">
-                      <span className="text-[13px] text-muted">
+                      <span className="text-[13px] text-foreground/70">
                         {exp.period}
                       </span>
                     </div>
                     <div className="md:col-span-9">
                       <h3 className="text-[18px] font-semibold">{exp.role}</h3>
-                      <p className="mt-1 text-[14px] text-muted">
+                      <p className="mt-1 text-[14px] text-foreground/70">
                         {exp.company}
                       </p>
-                      <p className="mt-4 text-[14px] leading-relaxed text-muted">
+                      <p className="mt-4 text-[14px] leading-relaxed text-foreground/70">
                         {exp.description}
                       </p>
                     </div>

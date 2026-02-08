@@ -36,7 +36,7 @@ export const LoadingScreen = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-[13px] text-muted">LOADING...</p>
+              <p className="text-[13px] text-foreground/70">LOADING...</p>
               <p className="mt-2 text-[48px] font-medium tabular-nums">
                 {Math.min(100, Math.floor(progress))}%
               </p>

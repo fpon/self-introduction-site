@@ -35,7 +35,7 @@ export const OrganismsAboutSection = ({
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-muted">
+              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
                 About
               </span>
               <h2 className="mt-2 text-[clamp(2rem,6vw,4rem)] font-bold leading-tight tracking-tighter">
@@ -46,12 +46,12 @@ export const OrganismsAboutSection = ({
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
-              <p className="mt-8 text-[15px] leading-relaxed text-muted">
+              <p className="mt-8 text-[15px] leading-relaxed text-foreground/70">
                 10年以上のソフトウェア開発経験を持つエンジニアです。
                 フロントエンドからバックエンド、インフラまで幅広い技術スタックを扱い、
                 チームリードとして複数のプロダクト開発を成功に導いてきました。
               </p>
-              <p className="mt-4 text-[15px] leading-relaxed text-muted">
+              <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
                 ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
                 価値あるプロダクトを生み出すことに情熱を注いでいます。
               </p>
@@ -69,7 +69,7 @@ export const OrganismsAboutSection = ({
 
           <div>
             <ScrollReveal delay={0.3}>
-              <span className="text-[11px] uppercase tracking-widest text-muted">
+              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
                 Skills
               </span>
             </ScrollReveal>
@@ -80,7 +80,7 @@ export const OrganismsAboutSection = ({
                     <span className="text-[14px] font-medium">
                       {skill.name}
                     </span>
-                    <span className="text-[12px] text-muted">
+                    <span className="text-[12px] text-foreground/70">
                       {skill.level}%
                     </span>
                   </div>

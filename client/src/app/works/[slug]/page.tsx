@@ -58,7 +58,7 @@ export default function WorkDetailPage() {
         <section className="px-8 py-24">
           <div className="mx-auto max-w-4xl">
             <ScrollReveal>
-              <h2 className="text-[11px] uppercase tracking-widest text-muted">
+              <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
                 Overview
               </h2>
               <p className="mt-4 text-[20px] leading-relaxed">
@@ -69,13 +69,13 @@ export default function WorkDetailPage() {
             <ScrollReveal delay={0.2}>
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div>
-                  <h3 className="text-[11px] uppercase tracking-widest text-muted">
+                  <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
                     Role
                   </h3>
                   <p className="mt-2 text-[15px]">Lead Developer</p>
                 </div>
                 <div>
-                  <h3 className="text-[11px] uppercase tracking-widest text-muted">
+                  <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
                     Timeline
                   </h3>
                   <p className="mt-2 text-[15px]">{work.year}</p>
@@ -85,7 +85,7 @@ export default function WorkDetailPage() {
 
             <ScrollReveal delay={0.3}>
               <div className="mt-16">
-                <h3 className="text-[11px] uppercase tracking-widest text-muted">
+                <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
                   Technologies
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-3">
@@ -103,10 +103,10 @@ export default function WorkDetailPage() {
 
             <ScrollReveal delay={0.4}>
               <div className="mt-24">
-                <h3 className="text-[11px] uppercase tracking-widest text-muted">
+                <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
                   Project Details
                 </h3>
-                <div className="mt-6 space-y-6 text-[15px] leading-relaxed text-muted">
+                <div className="mt-6 space-y-6 text-[15px] leading-relaxed text-foreground/70">
                   <p>
                     このプロジェクトでは、ユーザー体験を最優先に考え、直感的で使いやすいインターフェースを設計しました。
                     最新の技術スタックを採用し、パフォーマンスと保守性の両立を実現しています。
@@ -127,7 +127,7 @@ export default function WorkDetailPage() {
 
         <section className="border-t border-border px-8 py-24">
           <ScrollReveal>
-            <h2 className="text-[11px] uppercase tracking-widest text-muted">
+            <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
               Other Works
             </h2>
           </ScrollReveal>
