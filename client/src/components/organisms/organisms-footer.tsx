@@ -29,7 +29,7 @@ export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
               <MagneticButton key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-[13px] text-muted transition-colors hover:text-foreground"
+                  className="text-[13px] text-foreground/70 transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -41,7 +41,7 @@ export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
             <button
               type="button"
               onClick={onScrollToTop}
-              className="flex items-center gap-2 text-[13px] text-muted transition-colors hover:text-foreground"
+              className="flex items-center gap-2 text-[13px] text-foreground/70 transition-colors hover:text-foreground"
             >
               <motion.span
                 animate={{ y: [0, -5, 0] }}
@@ -55,10 +55,10 @@ export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="text-[12px] text-muted">
+          <p className="text-[12px] text-foreground/70">
             &copy; {new Date().getFullYear()} Your Name. All rights reserved.
           </p>
-          <p className="text-[12px] text-muted">
+          <p className="text-[12px] text-foreground/70">
             Designed & Built with passion
           </p>
         </div>

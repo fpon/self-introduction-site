@@ -14,10 +14,9 @@ type OrganismsHeroSectionProps = {
 
 const terminalCommands = [
   "bun run dev",
-  "git push origin main",
-  "docker compose up",
-  "turbo run build",
-  "vitest --coverage",
+  "sudo rm -rf /var/老化",
+  "git switch -c めっちゃ楽しい人生",
+  "kill -9 ストレス",
 ];
 
 export const OrganismsHeroSection = ({
@@ -51,9 +50,9 @@ export const OrganismsHeroSection = ({
           transition={{ duration: 0.8, delay: 2 }}
           className="mb-4"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-terminal-cyan/30 bg-terminal-cyan/5 px-4 py-1 text-[11px] uppercase tracking-widest text-terminal-cyan">
+          <span className="inline-flex items-center gap-2 rounded-full border border-dracula-purple/30 bg-dracula-purple/5 px-4 py-1 text-[11px] uppercase tracking-widest text-dracula-purple">
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-terminal-green"
+              className="h-1.5 w-1.5 rounded-full bg-dracula-green"
               animate={{ opacity: [1, 0.3, 1] }}
               transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
             />
@@ -83,12 +82,12 @@ export const OrganismsHeroSection = ({
         </div>
 
         <motion.div
-          className="mt-6 flex items-center gap-2 font-mono text-[13px] text-muted"
+          className="mt-6 flex items-center gap-2 font-mono text-[13px] text-foreground/70"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.8 }}
         >
-          <span className="text-terminal-green">$</span>
+          <span className="text-dracula-green">$</span>
           <TypewriterText
             texts={terminalCommands}
             typingSpeed={80}
@@ -98,7 +97,7 @@ export const OrganismsHeroSection = ({
         </motion.div>
 
         <motion.p
-          className="mt-6 max-w-md text-[14px] leading-relaxed text-muted"
+          className="mt-6 max-w-md text-[14px] leading-relaxed text-foreground/70"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3 }}
@@ -116,7 +115,7 @@ export const OrganismsHeroSection = ({
           <MagneticButton>
             <Link
               href="/works"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-terminal-cyan bg-terminal-cyan/10 px-8 py-4 text-[13px] font-medium text-foreground transition-all hover:bg-terminal-cyan hover:text-background"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-dracula-purple bg-dracula-purple/10 px-8 py-4 text-[13px] font-medium text-foreground transition-all hover:bg-dracula-purple hover:text-background"
             >
               <span className="relative z-10">View Works</span>
               <motion.span
@@ -131,7 +130,7 @@ export const OrganismsHeroSection = ({
           <MagneticButton>
             <Link
               href="/profile"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:border-terminal-cyan hover:text-terminal-cyan"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:border-dracula-purple hover:text-dracula-purple"
             >
               About Me
             </Link>
@@ -150,10 +149,10 @@ export const OrganismsHeroSection = ({
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <span className="text-[10px] uppercase tracking-widest text-muted">
+          <span className="text-[10px] uppercase tracking-widest text-foreground/50">
             Scroll
           </span>
-          <div className="h-12 w-px bg-gradient-to-b from-terminal-cyan to-transparent" />
+          <div className="h-12 w-px bg-gradient-to-b from-dracula-purple to-transparent" />
         </motion.div>
       </motion.div>
     </section>

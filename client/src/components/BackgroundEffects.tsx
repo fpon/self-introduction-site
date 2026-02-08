@@ -8,12 +8,12 @@ export const BackgroundEffects = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
       <div className="absolute inset-0 bg-noise opacity-[0.015]" />
 
-      <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full border border-terminal-cyan/5" />
-      <div className="absolute -right-16 top-1/4 h-64 w-64 rounded-full border border-terminal-cyan/5" />
-      <div className="absolute -right-8 top-1/4 h-48 w-48 rounded-full border border-dashed border-terminal-cyan/5" />
+      <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full border border-dracula-purple/5" />
+      <div className="absolute -right-16 top-1/4 h-64 w-64 rounded-full border border-dracula-purple/5" />
+      <div className="absolute -right-8 top-1/4 h-48 w-48 rounded-full border border-dashed border-dracula-purple/5" />
 
       <div className="absolute -left-48 bottom-1/4 h-[500px] w-[500px]">
-        <div className="h-full w-full rotate-45 border border-terminal-magenta/5" />
+        <div className="h-full w-full rotate-45 border border-dracula-pink/5" />
       </div>
 
       <div className="absolute left-6 top-[15%] font-mono text-[10px] text-foreground/15">
@@ -324,7 +324,7 @@ export const BackgroundEffects = () => {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((lineIndex) => (
           <motion.div
             key={`decorative-line-${lineIndex}`}
-            className="h-px bg-terminal-cyan/10"
+            className="h-px bg-dracula-purple/10"
             initial={{ width: 0 }}
             animate={{ width: `${12 + lineIndex * 3}px` }}
             transition={{ delay: 2 + lineIndex * 0.06, duration: 0.5 }}
@@ -376,7 +376,7 @@ export const BackgroundEffects = () => {
       </div>
 
       <motion.div
-        className="absolute right-1/4 top-1/2 h-2 w-2 rounded-full bg-terminal-cyan/20"
+        className="absolute right-1/4 top-1/2 h-2 w-2 rounded-full bg-dracula-purple/20"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.2, 0.4, 0.2],
@@ -384,7 +384,7 @@ export const BackgroundEffects = () => {
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
       />
       <motion.div
-        className="absolute left-1/3 top-1/4 h-1 w-1 rounded-full bg-terminal-magenta/25"
+        className="absolute left-1/3 top-1/4 h-1 w-1 rounded-full bg-dracula-pink/25"
         animate={{
           scale: [1, 2, 1],
           opacity: [0.2, 0.4, 0.2],
@@ -396,7 +396,7 @@ export const BackgroundEffects = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/3 h-1.5 w-1.5 rounded-full bg-terminal-green/20"
+        className="absolute bottom-1/4 right-1/3 h-1.5 w-1.5 rounded-full bg-dracula-green/20"
         animate={{
           scale: [1, 1.8, 1],
           opacity: [0.15, 0.35, 0.15],
@@ -408,7 +408,7 @@ export const BackgroundEffects = () => {
         }}
       />
       <motion.div
-        className="absolute left-1/2 top-1/3 h-1 w-1 rounded-full bg-terminal-yellow/20"
+        className="absolute left-1/2 top-1/3 h-1 w-1 rounded-full bg-dracula-yellow/20"
         animate={{
           scale: [1, 2.5, 1],
           opacity: [0.15, 0.35, 0.15],
@@ -420,7 +420,7 @@ export const BackgroundEffects = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/3 right-1/4 h-1.5 w-1.5 rounded-full bg-terminal-cyan/15"
+        className="absolute bottom-1/3 right-1/4 h-1.5 w-1.5 rounded-full bg-dracula-purple/15"
         animate={{
           scale: [1, 2, 1],
           opacity: [0.12, 0.28, 0.12],
@@ -432,7 +432,7 @@ export const BackgroundEffects = () => {
         }}
       />
       <motion.div
-        className="absolute left-[20%] top-[60%] h-1 w-1 rounded-full bg-terminal-magenta/20"
+        className="absolute left-[20%] top-[60%] h-1 w-1 rounded-full bg-dracula-pink/20"
         animate={{
           scale: [1, 2, 1],
           opacity: [0.15, 0.3, 0.15],
@@ -444,7 +444,7 @@ export const BackgroundEffects = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[20%] right-[40%] h-1.5 w-1.5 rounded-full bg-terminal-green/15"
+        className="absolute bottom-[20%] right-[40%] h-1.5 w-1.5 rounded-full bg-dracula-green/15"
         animate={{
           scale: [1, 1.6, 1],
           opacity: [0.12, 0.25, 0.12],
@@ -461,7 +461,7 @@ export const BackgroundEffects = () => {
           {Array.from({ length: 30 }, (_, i) => i + 1).map((barIndex) => (
             <motion.div
               key={`equalizer-bar-${barIndex}`}
-              className="w-0.5 bg-terminal-cyan/10"
+              className="w-0.5 bg-dracula-purple/10"
               animate={{
                 height: [6, 10 + (barIndex % 10) * 1.5, 6],
               }}
@@ -476,7 +476,7 @@ export const BackgroundEffects = () => {
       </div>
 
       <svg
-        className="absolute left-[20%] top-16 h-28 w-28 text-terminal-cyan/5"
+        className="absolute left-[20%] top-16 h-28 w-28 text-dracula-purple/5"
         aria-hidden="true"
       >
         <motion.circle
@@ -494,7 +494,7 @@ export const BackgroundEffects = () => {
       </svg>
 
       <svg
-        className="absolute bottom-24 right-[25%] h-20 w-20 text-terminal-magenta/5"
+        className="absolute bottom-24 right-[25%] h-20 w-20 text-dracula-pink/5"
         aria-hidden="true"
       >
         <motion.rect
@@ -512,7 +512,7 @@ export const BackgroundEffects = () => {
       </svg>
 
       <svg
-        className="absolute bottom-[30%] left-[35%] h-16 w-16 text-terminal-green/5"
+        className="absolute bottom-[30%] left-[35%] h-16 w-16 text-dracula-green/5"
         aria-hidden="true"
       >
         <motion.polygon
@@ -527,7 +527,7 @@ export const BackgroundEffects = () => {
       </svg>
 
       <svg
-        className="absolute right-[10%] top-[45%] h-12 w-12 text-terminal-yellow/5"
+        className="absolute right-[10%] top-[45%] h-12 w-12 text-dracula-yellow/5"
         aria-hidden="true"
       >
         <motion.line

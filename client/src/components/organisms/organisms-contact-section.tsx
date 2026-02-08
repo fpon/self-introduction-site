@@ -15,7 +15,7 @@ export const OrganismsContactSection = () => {
       <div className="px-8">
         <div className="mx-auto max-w-4xl text-center">
           <ScrollReveal>
-            <span className="text-[11px] uppercase tracking-widest text-muted">
+            <span className="text-[11px] uppercase tracking-widest text-foreground/70">
               Get in Touch
             </span>
           </ScrollReveal>
@@ -29,7 +29,7 @@ export const OrganismsContactSection = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <p className="mx-auto mt-8 max-w-md text-[15px] leading-relaxed text-muted">
+            <p className="mx-auto mt-8 max-w-md text-[15px] leading-relaxed text-foreground/70">
               新しいプロジェクトのご相談、お仕事のご依頼など、
               お気軽にご連絡ください。
             </p>
@@ -60,7 +60,7 @@ export const OrganismsContactSection = () => {
                 <MagneticButton key={social.name}>
                   <a
                     href={social.href}
-                    className="text-[13px] text-muted transition-colors hover:text-foreground"
+                    className="text-[13px] text-foreground/70 transition-colors hover:text-foreground"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
