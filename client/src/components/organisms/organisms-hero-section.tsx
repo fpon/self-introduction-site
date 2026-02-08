@@ -14,8 +14,8 @@ type OrganismsHeroSectionProps = {
 
 const terminalCommands = [
   "bun run dev",
-  "sudo rm -rf /var/老化/*",
-  "git switch -c 理想の人生",
+  "sudo rm -rf /var/老化",
+  "git switch -c めっちゃ楽しい人生",
   "kill -9 ストレス",
   "bun remove 疲労",
 ];
