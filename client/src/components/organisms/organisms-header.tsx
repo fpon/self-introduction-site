@@ -21,6 +21,7 @@ type OrganismsHeaderProps = {
 export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
   return (
     <motion.header
+      layoutRoot
       className="fixed top-0 z-50 w-full mix-blend-difference"
       initial={{ y: -100 }}
       animate={{ y: 0 }}

@@ -41,7 +41,7 @@ export const MagneticButton = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ x: xSpring, y: ySpring }}
-      className={className}
+      className={`relative ${className}`}
     >
       {children}
     </motion.div>
