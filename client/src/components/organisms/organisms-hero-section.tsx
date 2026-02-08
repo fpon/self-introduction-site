@@ -14,12 +14,12 @@ type OrganismsHeroSectionProps = {
 
 const terminalCommands = [
   "bun run dev",
-  "git push origin main",
-  "rm -rf node_modules && bun i",
-  "sudo rm -rf /tmp/bugs",
-  "docker compose up -d",
-  "git commit -m 'fix: 絶対に動く'",
-  "rm -rf legacy_code/",
+  "rm -rf 睡眠不足/",
+  "sudo rm -rf /var/老化/*",
+  "git checkout -b 理想の人生",
+  "kill -9 ストレス",
+  "npm uninstall 疲労",
+  "rm -rf 月曜日/",
 ];
 
 export const OrganismsHeroSection = ({
