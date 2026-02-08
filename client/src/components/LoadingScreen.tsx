@@ -1,25 +1,47 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const LOADING_SHOWN_KEY = "loadingShown";
 
 export const LoadingScreen = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (
+      typeof window !== "undefined" &&
+      sessionStorage.getItem(LOADING_SHOWN_KEY)
+    )
+      return;
+
+    setIsLoading(true);
+    intervalRef.current = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => setIsLoading(false), 500);
+        const next = prev + Math.random() * 15;
+        if (next >= 100) {
+          if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+          }
+          setTimeout(() => {
+            setIsLoading(false);
+            sessionStorage.setItem(LOADING_SHOWN_KEY, "true");
+          }, 500);
           return 100;
         }
-        return prev + Math.random() * 15;
+        return next;
       });
     }, 100);
 
-    return () => clearInterval(interval);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
   }, []);
 
   return (

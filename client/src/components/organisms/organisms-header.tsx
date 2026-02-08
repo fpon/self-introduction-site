@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const navItems = [
@@ -19,13 +20,23 @@ type OrganismsHeaderProps = {
 };
 
 export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsFirstLoad(false), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <motion.header
-      layoutRoot
       className="fixed top-0 z-50 w-full mix-blend-difference"
-      initial={{ y: -100 }}
+      initial={isFirstLoad ? { y: -100 } : false}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, delay: 1.5, ease: [0.76, 0, 0.24, 1] }}
+      transition={{
+        duration: 0.8,
+        delay: isFirstLoad ? 1.5 : 0,
+        ease: [0.76, 0, 0.24, 1],
+      }}
     >
       <nav className="flex h-20 items-center justify-between px-8">
         <MagneticButton>
@@ -46,10 +57,7 @@ export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
                 >
                   {item.label}
                   {pathname === item.href && (
-                    <motion.span
-                      layoutId="nav-indicator"
-                      className="absolute bottom-0 left-4 right-4 h-px bg-white"
-                    />
+                    <span className="absolute bottom-0 left-4 right-4 h-px bg-white" />
                   )}
                 </Link>
               </MagneticButton>

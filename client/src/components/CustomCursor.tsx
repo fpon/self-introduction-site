@@ -30,30 +30,33 @@ export const CustomCursor = () => {
     const handleMouseDown = () => setIsClicking(true);
     const handleMouseUp = () => setIsClicking(false);
 
-    const handleMouseEnter = () => {
-      const hoverable = document.querySelectorAll(
-        'a, button, [data-cursor="hover"]',
-      );
-      hoverable.forEach((el) => {
-        el.addEventListener("mouseenter", () => setIsHovering(true));
-        el.addEventListener("mouseleave", () => setIsHovering(false));
-      });
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('a, button, [data-cursor="hover"]')) {
+        setIsHovering(true);
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('a, button, [data-cursor="hover"]')) {
+        setIsHovering(false);
+      }
     };
 
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mouseup", handleMouseUp);
-    handleMouseEnter();
-
-    const observer = new MutationObserver(handleMouseEnter);
-    observer.observe(document.body, { childList: true, subtree: true });
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
-      observer.disconnect();
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
     };
   }, [cursorX, cursorY]);
 
