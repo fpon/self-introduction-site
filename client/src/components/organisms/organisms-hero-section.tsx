@@ -82,7 +82,7 @@ export const OrganismsHeroSection = ({
         </div>
 
         <motion.div
-          className="mt-6 flex items-center gap-2 font-mono text-[13px] text-muted"
+          className="mt-6 flex items-center gap-2 font-mono text-[13px] text-foreground/70"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.8 }}
@@ -97,7 +97,7 @@ export const OrganismsHeroSection = ({
         </motion.div>
 
         <motion.p
-          className="mt-6 max-w-md text-[14px] leading-relaxed text-muted"
+          className="mt-6 max-w-md text-[14px] leading-relaxed text-foreground/70"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3 }}
@@ -149,7 +149,7 @@ export const OrganismsHeroSection = ({
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <span className="text-[10px] uppercase tracking-widest text-muted">
+          <span className="text-[10px] uppercase tracking-widest text-foreground/50">
             Scroll
           </span>
           <div className="h-12 w-px bg-gradient-to-b from-dracula-purple to-transparent" />
