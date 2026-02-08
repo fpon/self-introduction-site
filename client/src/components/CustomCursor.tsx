@@ -7,11 +7,12 @@ export const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
+  const [isClicking, setIsClicking] = useState(false);
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { damping: 25, stiffness: 300 };
+  const springConfig = { damping: 25, stiffness: 400 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
@@ -26,6 +27,9 @@ export const CustomCursor = () => {
       setIsVisible(true);
     };
 
+    const handleMouseDown = () => setIsClicking(true);
+    const handleMouseUp = () => setIsClicking(false);
+
     const handleMouseEnter = () => {
       const hoverable = document.querySelectorAll(
         'a, button, [data-cursor="hover"]',
@@ -37,6 +41,8 @@ export const CustomCursor = () => {
     };
 
     window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
     handleMouseEnter();
 
     const observer = new MutationObserver(handleMouseEnter);
@@ -45,6 +51,8 @@ export const CustomCursor = () => {
     return () => {
       window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
       observer.disconnect();
     };
   }, [cursorX, cursorY]);
@@ -54,41 +62,73 @@ export const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="pointer-events-none fixed left-0 top-0 z-[9999] mix-blend-difference"
+        className="pointer-events-none fixed left-0 top-0 z-[9999]"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
-          translateX: "-50%",
-          translateY: "-50%",
         }}
       >
         <motion.div
-          className="rounded-full bg-white"
+          className="relative flex items-center justify-center"
           animate={{
-            width: isHovering ? 60 : 12,
-            height: isHovering ? 60 : 12,
-            opacity: isVisible ? 1 : 0,
+            scale: isClicking ? 0.8 : 1,
           }}
-          transition={{ duration: 0.2 }}
-        />
+          transition={{ duration: 0.1 }}
+        >
+          <motion.div
+            className="absolute rounded-sm bg-terminal-cyan"
+            animate={{
+              width: isHovering ? 40 : 2,
+              height: isHovering ? 40 : 20,
+              opacity: isVisible ? [1, 0.6, 1] : 0,
+              borderRadius: isHovering ? "4px" : "1px",
+            }}
+            transition={{
+              opacity: {
+                duration: 0.8,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              },
+              default: { duration: 0.2 },
+            }}
+            style={{
+              boxShadow: isHovering
+                ? "0 0 20px var(--terminal-cyan), 0 0 40px var(--terminal-cyan)"
+                : "0 0 8px var(--terminal-cyan), 0 0 16px var(--terminal-cyan)",
+            }}
+          />
+          {isHovering && (
+            <motion.span
+              className="relative z-10 font-mono text-[10px] font-bold text-background"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {"_"}
+            </motion.span>
+          )}
+        </motion.div>
       </motion.div>
       <motion.div
         className="pointer-events-none fixed left-0 top-0 z-[9998]"
         style={{
           x: cursorX,
           y: cursorY,
-          translateX: "-50%",
-          translateY: "-50%",
         }}
       >
         <motion.div
-          className="rounded-full border border-foreground/30"
+          className="rounded-full border border-terminal-cyan/30"
           animate={{
-            width: isHovering ? 80 : 40,
-            height: isHovering ? 80 : 40,
-            opacity: isVisible ? 1 : 0,
+            width: isHovering ? 60 : 32,
+            height: isHovering ? 60 : 32,
+            opacity: isVisible ? 0.5 : 0,
+            x: isHovering ? -30 : -16,
+            y: isHovering ? -30 : -16,
           }}
-          transition={{ duration: 0.3, delay: 0.05 }}
+          transition={{ duration: 0.3, delay: 0.02 }}
+          style={{
+            boxShadow: "0 0 10px var(--terminal-cyan)",
+          }}
         />
       </motion.div>
     </>

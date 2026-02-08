@@ -2,13 +2,23 @@ import type { MotionValue } from "framer-motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import type { RefObject } from "react";
+import { GlitchText } from "@/components/GlitchText";
 import { MagneticButton } from "@/components/MagneticButton";
+import { TypewriterText } from "@/components/TypewriterText";
 
 type OrganismsHeroSectionProps = {
   containerRef: RefObject<HTMLElement | null>;
   y: MotionValue<number>;
   opacity: MotionValue<number>;
 };
+
+const terminalCommands = [
+  "bun run dev",
+  "git push origin main",
+  "docker compose up",
+  "turbo run build",
+  "vitest --coverage",
+];
 
 export const OrganismsHeroSection = ({
   containerRef,
@@ -41,7 +51,12 @@ export const OrganismsHeroSection = ({
           transition={{ duration: 0.8, delay: 2 }}
           className="mb-4"
         >
-          <span className="inline-block rounded-full border border-border px-4 py-1 text-[11px] uppercase tracking-widest text-muted">
+          <span className="inline-flex items-center gap-2 rounded-full border border-terminal-cyan/30 bg-terminal-cyan/5 px-4 py-1 text-[11px] uppercase tracking-widest text-terminal-cyan">
+            <motion.span
+              className="h-1.5 w-1.5 rounded-full bg-terminal-green"
+              animate={{ opacity: [1, 0.3, 1] }}
+              transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+            />
             Software Engineer
           </span>
         </motion.div>
@@ -53,7 +68,7 @@ export const OrganismsHeroSection = ({
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.2, ease: [0.76, 0, 0.24, 1] }}
           >
-            Creative
+            <GlitchText intensity="low">Creative</GlitchText>
           </motion.h2>
         </div>
         <div className="overflow-hidden">
@@ -63,15 +78,30 @@ export const OrganismsHeroSection = ({
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.4, ease: [0.76, 0, 0.24, 1] }}
           >
-            Developer
+            <GlitchText intensity="low">Developer</GlitchText>
           </motion.h2>
         </div>
 
+        <motion.div
+          className="mt-6 flex items-center gap-2 font-mono text-[13px] text-muted"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.8 }}
+        >
+          <span className="text-terminal-green">$</span>
+          <TypewriterText
+            texts={terminalCommands}
+            typingSpeed={80}
+            deletingSpeed={40}
+            pauseDuration={2500}
+          />
+        </motion.div>
+
         <motion.p
-          className="mt-8 max-w-md text-[14px] leading-relaxed text-muted"
+          className="mt-6 max-w-md text-[14px] leading-relaxed text-muted"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.8 }}
+          transition={{ duration: 0.8, delay: 3 }}
         >
           プロダクト開発とチームマネジメントに情熱を注ぐエンジニア。
           ユーザーに価値を届けるプロダクトを作っています。
@@ -81,12 +111,12 @@ export const OrganismsHeroSection = ({
           className="mt-12 flex gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 3 }}
+          transition={{ duration: 0.8, delay: 3.2 }}
         >
           <MagneticButton>
             <Link
               href="/works"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-foreground px-8 py-4 text-[13px] font-medium text-background"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-terminal-cyan bg-terminal-cyan/10 px-8 py-4 text-[13px] font-medium text-foreground transition-all hover:bg-terminal-cyan hover:text-background"
             >
               <span className="relative z-10">View Works</span>
               <motion.span
@@ -96,13 +126,12 @@ export const OrganismsHeroSection = ({
               >
                 →
               </motion.span>
-              <span className="absolute inset-0 -translate-x-full bg-accent transition-transform duration-300 group-hover:translate-x-0" />
             </Link>
           </MagneticButton>
           <MagneticButton>
             <Link
               href="/profile"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:bg-foreground hover:text-background"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-[13px] font-medium transition-colors hover:border-terminal-cyan hover:text-terminal-cyan"
             >
               About Me
             </Link>
@@ -124,7 +153,7 @@ export const OrganismsHeroSection = ({
           <span className="text-[10px] uppercase tracking-widest text-muted">
             Scroll
           </span>
-          <div className="h-12 w-px bg-gradient-to-b from-foreground to-transparent" />
+          <div className="h-12 w-px bg-gradient-to-b from-terminal-cyan to-transparent" />
         </motion.div>
       </motion.div>
     </section>
