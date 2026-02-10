@@ -39,7 +39,7 @@ export const OrganismsHeroSection = ({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, delay: 1.8, ease: [0.76, 0, 0.24, 1] }}
         >
-          YN
+          ふぽん
         </motion.h1>
       </motion.div>
 

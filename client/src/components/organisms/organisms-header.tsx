@@ -41,7 +41,7 @@ export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
       <nav className="flex h-20 items-center justify-between px-8">
         <MagneticButton>
           <Link href="/" className="text-lg font-semibold text-white">
-            YN.
+            ふぽん
           </Link>
         </MagneticButton>
 
