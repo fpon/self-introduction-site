@@ -6,18 +6,18 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const experiences = [
   {
-    period: "2025.4 — Present",
+    period: "2023.4 — Present",
     role: "Webアプリケーションエンジニア",
     company: "Sky Grid株式会社",
     description:
-      "受託開発・社内SaaSの開発に従事。1000万円規模の案件で要件定義から実装まで一貫して担当。Next.js / TypeScript / FastAPIを用いた開発と、累計6名のメンバー教育も担当。",
+      "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして最大9名（ベトナム3名、国内2名、社員4名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
   },
   {
-    period: "2022.10 — 2025.3",
+    period: "2022.10 — 2023.3",
     role: "エンジニアインターン",
     company: "Sky Grid株式会社",
     description:
-      "インターンとして開発業務に参画。実践的な開発経験を積みながら、チーム開発のスキルを習得。",
+      "インターンとして開発業務に参画。社内SaaSプロジェクトでNext.js / TypeScript / Prismaを用いた開発を経験。",
   },
 ];
 
