@@ -102,8 +102,8 @@ export const OrganismsHeroSection = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3 }}
         >
-          プロダクト開発とチームマネジメントに情熱を注ぐエンジニア。
-          ユーザーに価値を届けるプロダクトを作っています。
+          AIとWebを融合させ、価値あるプロダクトを届けるエンジニア。
+          要件定義から実装まで一気通貫で担当しています。
         </motion.p>
 
         <motion.div

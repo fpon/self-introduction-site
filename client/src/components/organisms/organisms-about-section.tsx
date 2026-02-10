@@ -6,11 +6,11 @@ import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
 const skills = [
   { name: "TypeScript", level: 95 },
-  { name: "React / Next.js", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "Python", level: 80 },
-  { name: "AWS", level: 75 },
-  { name: "Team Management", level: 85 },
+  { name: "Next.js", level: 90 },
+  { name: "TailwindCSS", level: 90 },
+  { name: "Prisma", level: 85 },
+  { name: "FastAPI / Python", level: 80 },
+  { name: "チームマネジメント", level: 85 },
 ];
 
 type OrganismsAboutSectionProps = {
@@ -47,13 +47,12 @@ export const OrganismsAboutSection = ({
 
             <ScrollReveal delay={0.4}>
               <p className="mt-8 text-[15px] leading-relaxed text-foreground/70">
-                10年以上のソフトウェア開発経験を持つエンジニアです。
-                フロントエンドからバックエンド、インフラまで幅広い技術スタックを扱い、
-                チームリードとして複数のプロダクト開発を成功に導いてきました。
+                AIとWebを融合させ、製造現場へ革新を届けるエンジニアです。
+                要件定義から実装まで一気通貫で担当し、1000万円規模の案件を成功に導いてきました。
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
-                ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
-                価値あるプロダクトを生み出すことに情熱を注いでいます。
+                顧客課題の解像度を高め、泥臭くやり抜く姿勢を大切にしています。
+                累計8名のメンバー教育経験を通じて、チームの成長にも貢献しています。
               </p>
             </ScrollReveal>
 

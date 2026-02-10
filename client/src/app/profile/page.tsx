@@ -6,25 +6,11 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const experiences = [
   {
-    period: "2020 — Present",
-    role: "Senior Software Engineer / Tech Lead",
-    company: "Tech Company Inc.",
+    period: "2025.4 — Present",
+    role: "Webアプリケーションエンジニア",
+    company: "Sky Grid株式会社",
     description:
-      "フロントエンドチームのリードとして、大規模Webアプリケーションの設計・開発を担当。チームビルディングとメンタリングにも注力。",
-  },
-  {
-    period: "2018 — 2020",
-    role: "Software Engineer",
-    company: "Startup Inc.",
-    description:
-      "新規プロダクトの立ち上げから運用まで担当。フルスタックでの開発経験を積む。",
-  },
-  {
-    period: "2016 — 2018",
-    role: "Junior Engineer",
-    company: "Web Agency",
-    description:
-      "Webサイト制作とCMS開発を担当。クライアントワークを通じて多様な業界の課題解決に携わる。",
+      "受託開発・社内SaaSの開発に従事。1000万円規模の案件で要件定義から実装まで一貫して担当。Next.js / TypeScript / FastAPIを用いた開発と、累計8名のメンバー教育も担当。",
   },
 ];
 
@@ -73,16 +59,16 @@ export default function ProfilePage() {
             <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
               <ScrollReveal delay={0.2}>
                 <p className="text-[20px] font-medium leading-relaxed">
-                  10年以上のソフトウェア開発経験を持つエンジニアです。
-                  フロントエンドからバックエンド、インフラまで幅広い技術スタックを扱います。
+                  AIとWebを融合させ、製造現場へ革新を届けるエンジニア。 龍谷大学
+                  社会学部 コミュニティマネジメント学科卒業。
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
                 <p className="text-[15px] leading-relaxed text-foreground/70">
-                  現在はテックリードとして、チームの技術的な意思決定をリードしながら、
-                  自らも手を動かしてプロダクト開発に携わっています。
-                  ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
-                  価値あるプロダクトを生み出すことに情熱を注いでいます。
+                  要件定義から実装まで一気通貫で担当し、顧客課題の解像度を高めながら
+                  泥臭くやり抜く姿勢を大切にしています。
+                  行動心理学等の理論を活用した戦略的導入と、継続的改善が回る仕組みづくりに注力。
+                  累計8名のメンバー教育経験あり。
                 </p>
               </ScrollReveal>
             </div>
