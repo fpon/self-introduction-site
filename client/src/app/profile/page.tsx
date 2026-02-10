@@ -10,7 +10,7 @@ const experiences = [
     role: "Webアプリケーションエンジニア",
     company: "Sky Grid株式会社",
     description:
-      "受託開発・社内SaaSの開発に従事。1000万円規模の案件で要件定義から実装まで一貫して担当。Next.js / TypeScript / FastAPIを用いた開発と、累計8名のメンバー教育も担当。",
+      "受託開発・社内SaaSの開発に従事。1000万円規模の案件で要件定義から実装まで一貫して担当。Next.js / TypeScript / FastAPIを用いた開発と、累計6名のメンバー教育も担当。",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function ProfilePage() {
                   要件定義から実装まで一気通貫で担当し、顧客課題の解像度を高めながら
                   泥臭くやり抜く姿勢を大切にしています。
                   行動心理学等の理論を活用した戦略的導入と、継続的改善が回る仕組みづくりに注力。
-                  累計8名のメンバー教育経験あり。
+                  累計6名のメンバー教育経験あり。
                 </p>
               </ScrollReveal>
             </div>

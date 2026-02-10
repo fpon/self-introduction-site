@@ -52,7 +52,7 @@ export const OrganismsAboutSection = ({
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
                 顧客課題の解像度を高め、泥臭くやり抜く姿勢を大切にしています。
-                累計8名のメンバー教育経験を通じて、チームの成長にも貢献しています。
+                累計6名のメンバー教育経験を通じて、チームの成長にも貢献しています。
               </p>
             </ScrollReveal>
 
