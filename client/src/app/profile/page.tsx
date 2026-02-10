@@ -12,6 +12,13 @@ const experiences = [
     description:
       "受託開発・社内SaaSの開発に従事。1000万円規模の案件で要件定義から実装まで一貫して担当。Next.js / TypeScript / FastAPIを用いた開発と、累計6名のメンバー教育も担当。",
   },
+  {
+    period: "2022.10 — 2025.3",
+    role: "エンジニアインターン",
+    company: "Sky Grid株式会社",
+    description:
+      "インターンとして開発業務に参画。実践的な開発経験を積みながら、チーム開発のスキルを習得。",
+  },
 ];
 
 const values = [
