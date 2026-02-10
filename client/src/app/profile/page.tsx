@@ -10,7 +10,7 @@ const experiences = [
     role: "Webアプリケーションエンジニア",
     company: "Sky Grid株式会社",
     description:
-      "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして最大5名（外注2名、社内3名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
+      "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして累計6名（同時最大5名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
   },
   {
     period: "2022.10 — 2023.3",
