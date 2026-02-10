@@ -67,7 +67,7 @@ export const OrganismsHeroSection = ({
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.2, ease: [0.76, 0, 0.24, 1] }}
           >
-            <GlitchText intensity="low">Creative</GlitchText>
+            <GlitchText intensity="low">./はじめまして</GlitchText>
           </motion.h2>
         </div>
         <div className="overflow-hidden">
@@ -77,7 +77,7 @@ export const OrganismsHeroSection = ({
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.4, ease: [0.76, 0, 0.24, 1] }}
           >
-            <GlitchText intensity="low">Developer</GlitchText>
+            <GlitchText intensity="low">--engineer</GlitchText>
           </motion.h2>
         </div>
 
