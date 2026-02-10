@@ -62,7 +62,7 @@ export const OrganismsHeroSection = ({
 
         <div className="overflow-hidden">
           <motion.h2
-            className="text-[clamp(3rem,12vw,10rem)] font-bold leading-[0.9] tracking-tighter"
+            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.9] tracking-tighter"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.2, ease: [0.76, 0, 0.24, 1] }}
@@ -72,7 +72,7 @@ export const OrganismsHeroSection = ({
         </div>
         <div className="overflow-hidden">
           <motion.h2
-            className="text-[clamp(3rem,12vw,10rem)] font-bold leading-[0.9] tracking-tighter"
+            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.9] tracking-tighter"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.4, ease: [0.76, 0, 0.24, 1] }}
