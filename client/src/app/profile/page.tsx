@@ -7,15 +7,16 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 const experiences = [
   {
     period: "2016.4 — 2019.3",
-    role: "高校",
-    company: "関西大倉高等学校",
+    role: "関西大倉高等学校",
+    company: "",
     description: "",
   },
   {
     period: "2019.4 — 2023.3",
-    role: "大学",
-    company: "龍谷大学 社会学部 コミュニティマネジメント学科",
-    description: "",
+    role: "龍谷大学 社会学部 コミュニティマネジメント学科",
+    company: "",
+    description:
+      "地域社会の課題解決やコミュニティデザインを学習。社会調査の手法や、NPO・行政・企業の協働によるまちづくりについて研究。",
   },
   {
     period: "2022.10 — 2023.3",
