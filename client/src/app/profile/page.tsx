@@ -6,18 +6,30 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const experiences = [
   {
-    period: "2023.4 — Present",
-    role: "Webアプリケーションエンジニア",
-    company: "Sky Grid株式会社",
-    description:
-      "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして累計6名（同時最大5名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
+    period: "2016.4 — 2019.3",
+    role: "高校",
+    company: "関西大倉高等学校",
+    description: "",
+  },
+  {
+    period: "2019.4 — 2023.3",
+    role: "大学",
+    company: "龍谷大学 社会学部 コミュニティマネジメント学科",
+    description: "",
   },
   {
     period: "2022.10 — 2023.3",
     role: "エンジニアインターン",
     company: "Sky Grid株式会社",
     description:
-      "インターンとして開発業務に参画。社内SaaSプロジェクトでNext.js / TypeScript / Prismaを用いた開発を経験。",
+      "在学中にインターンとして開発業務に参画。社内SaaSプロジェクトでNext.js / TypeScript / Prismaを用いた開発を経験。",
+  },
+  {
+    period: "2023.4 — Present",
+    role: "Webアプリケーションエンジニア",
+    company: "Sky Grid株式会社",
+    description:
+      "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして累計6名（同時最大5名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
   },
 ];
 
