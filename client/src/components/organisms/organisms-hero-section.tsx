@@ -70,9 +70,9 @@ export const OrganismsHeroSection = ({
             <GlitchText intensity="low">./はじめまして</GlitchText>
           </motion.h2>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden pb-2">
           <motion.h2
-            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.9] tracking-tighter"
+            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[1] tracking-tighter"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.4, ease: [0.76, 0, 0.24, 1] }}
