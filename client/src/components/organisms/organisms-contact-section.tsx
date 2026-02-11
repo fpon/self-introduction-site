@@ -38,11 +38,11 @@ export const OrganismsContactSection = () => {
           <ScrollReveal delay={0.5}>
             <MagneticButton className="mt-12">
               <a
-                href="mailto:your@email.com"
+                href="mailto:fponlv@gmail.com"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-foreground px-12 py-6"
               >
                 <span className="relative z-10 text-[18px] font-medium transition-colors group-hover:text-background">
-                  your@email.com
+                  fponlv@gmail.com
                 </span>
                 <motion.span
                   className="absolute inset-0 bg-foreground"
