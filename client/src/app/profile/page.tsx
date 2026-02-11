@@ -11,6 +11,11 @@ const milestones = [
     description: "",
   },
   {
+    date: "2019.4",
+    title: "龍谷大学 社会学部 コミュニティマネジメント学科 入学",
+    description: "",
+  },
+  {
     date: "2022.10",
     title: "Sky Grid株式会社 インターン開始",
     description:
