@@ -11,8 +11,8 @@ const navItems = [
 ];
 
 const socials = [
-  { name: "Tw", href: "https://twitter.com", full: "Twitter" },
-  { name: "Gh", href: "https://github.com", full: "GitHub" },
+  { name: "X", href: "https://x.com/p4pcfl", full: "X" },
+  { name: "Gh", href: "https://github.com/fpon", full: "GitHub" },
 ];
 
 type OrganismsHeaderProps = {
@@ -41,7 +41,7 @@ export const OrganismsHeader = ({ pathname }: OrganismsHeaderProps) => {
       <nav className="flex h-20 items-center justify-between px-8">
         <MagneticButton>
           <Link href="/" className="text-lg font-semibold text-white">
-            YN.
+            ふぽん
           </Link>
         </MagneticButton>
 

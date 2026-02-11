@@ -173,7 +173,7 @@ export default function ManagementPage() {
                 お気軽にご連絡ください。
               </p>
               <a
-                href="mailto:your@email.com"
+                href="mailto:fponlv@gmail.com"
                 className="mt-8 inline-flex items-center gap-2 rounded-full border border-foreground px-8 py-4 text-[13px] font-medium transition-colors hover:bg-foreground hover:text-background"
               >
                 Get in Touch →

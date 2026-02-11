@@ -4,27 +4,34 @@ import { motion } from "framer-motion";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const experiences = [
+const milestones = [
   {
-    period: "2020 — Present",
-    role: "Senior Software Engineer / Tech Lead",
-    company: "Tech Company Inc.",
+    date: "2022.10",
+    title: "Sky Grid株式会社 インターン開始",
     description:
-      "フロントエンドチームのリードとして、大規模Webアプリケーションの設計・開発を担当。チームビルディングとメンタリングにも注力。",
+      "在学中にインターンとして開発業務に参画。社内SaaSプロジェクトでNext.js / TypeScript / Prismaを用いた開発を経験。",
   },
   {
-    period: "2018 — 2020",
-    role: "Software Engineer",
-    company: "Startup Inc.",
+    date: "2023.3",
+    title: "龍谷大学 社会学部 コミュニティマネジメント学科 卒業",
     description:
-      "新規プロダクトの立ち上げから運用まで担当。フルスタックでの開発経験を積む。",
+      "「地域を元気にする人を育てる」を理念とする学科で、実習重視のカリキュラムを通じて学習。コミュニティデザイン・ライフデザイン・ジャーナリズムの3領域を横断的に学び、少人数ゼミで卒業研究に取り組んだ。",
   },
   {
-    period: "2016 — 2018",
-    role: "Junior Engineer",
-    company: "Web Agency",
+    date: "2023.4",
+    title: "Sky Grid株式会社 入社",
     description:
-      "Webサイト制作とCMS開発を担当。クライアントワークを通じて多様な業界の課題解決に携わる。",
+      "受託開発・自社SaaSの開発に従事。物流基幹システムでは要件定義・設計・PM・上流の納期調整・開発まで一貫して担当。独自AIチャットボット開発ではPMとして累計8名（同時最大5名、うち日本語を話せない海外外注3名含む）をマネジメント。その他、大学教授向けシラバスチェックアプリ、お見合いアプリ（Stripe決済・WebSocketリアルタイム通信）など多数のプロジェクトを経験。組織マネジメントではリーダーとして1on1ミーティングを実施、メンターとして4名のメンティーを担当、プログラマー6名の教育も行った。",
+  },
+  {
+    date: "2025.12",
+    title: "Sky Grid株式会社 退社",
+    description: "",
+  },
+  {
+    date: "2026.3",
+    title: "株式会社フツパー 入社",
+    description: "",
   },
 ];
 
@@ -73,16 +80,16 @@ export default function ProfilePage() {
             <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
               <ScrollReveal delay={0.2}>
                 <p className="text-[20px] font-medium leading-relaxed">
-                  10年以上のソフトウェア開発経験を持つエンジニアです。
-                  フロントエンドからバックエンド、インフラまで幅広い技術スタックを扱います。
+                  AIとWebを融合させ、製造現場へ革新を届けるエンジニア。 龍谷大学
+                  社会学部 コミュニティマネジメント学科卒業。
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
                 <p className="text-[15px] leading-relaxed text-foreground/70">
-                  現在はテックリードとして、チームの技術的な意思決定をリードしながら、
-                  自らも手を動かしてプロダクト開発に携わっています。
-                  ユーザーファーストな開発姿勢と、チームの成長を大切にしながら、
-                  価値あるプロダクトを生み出すことに情熱を注いでいます。
+                  要件定義から実装まで一気通貫で担当し、顧客課題の解像度を高めながら
+                  泥臭くやり抜く姿勢を大切にしています。
+                  行動心理学等の理論を活用した戦略的導入と、継続的改善が回る仕組みづくりに注力。
+                  累計6名のメンバー教育経験あり。
                 </p>
               </ScrollReveal>
             </div>
@@ -93,13 +100,13 @@ export default function ProfilePage() {
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
               <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Experience
+                Timeline
               </h2>
             </ScrollReveal>
 
             <div className="mt-12 space-y-0">
-              {experiences.map((exp, index) => (
-                <ScrollReveal key={exp.period} delay={index * 0.1}>
+              {milestones.map((milestone, index) => (
+                <ScrollReveal key={milestone.date} delay={index * 0.1}>
                   <motion.div
                     className="grid grid-cols-1 gap-6 border-t border-border py-12 md:grid-cols-12"
                     whileHover={{ backgroundColor: "var(--hover)" }}
@@ -107,17 +114,18 @@ export default function ProfilePage() {
                   >
                     <div className="md:col-span-3">
                       <span className="text-[13px] text-foreground/70">
-                        {exp.period}
+                        {milestone.date}
                       </span>
                     </div>
                     <div className="md:col-span-9">
-                      <h3 className="text-[18px] font-semibold">{exp.role}</h3>
-                      <p className="mt-1 text-[14px] text-foreground/70">
-                        {exp.company}
-                      </p>
-                      <p className="mt-4 text-[14px] leading-relaxed text-foreground/70">
-                        {exp.description}
-                      </p>
+                      <h3 className="text-[18px] font-semibold">
+                        {milestone.title}
+                      </h3>
+                      {milestone.description && (
+                        <p className="mt-4 text-[14px] leading-relaxed text-foreground/70">
+                          {milestone.description}
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 </ScrollReveal>

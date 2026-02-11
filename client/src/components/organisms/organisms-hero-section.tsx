@@ -39,7 +39,7 @@ export const OrganismsHeroSection = ({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, delay: 1.8, ease: [0.76, 0, 0.24, 1] }}
         >
-          YN
+          ふぽん
         </motion.h1>
       </motion.div>
 
@@ -62,22 +62,22 @@ export const OrganismsHeroSection = ({
 
         <div className="overflow-hidden">
           <motion.h2
-            className="text-[clamp(3rem,12vw,10rem)] font-bold leading-[0.9] tracking-tighter"
+            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.9] tracking-tighter"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.2, ease: [0.76, 0, 0.24, 1] }}
           >
-            <GlitchText intensity="low">Creative</GlitchText>
+            <GlitchText intensity="low">./はじめまして</GlitchText>
           </motion.h2>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden pb-2">
           <motion.h2
-            className="text-[clamp(3rem,12vw,10rem)] font-bold leading-[0.9] tracking-tighter"
+            className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[1] tracking-tighter"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 2.4, ease: [0.76, 0, 0.24, 1] }}
           >
-            <GlitchText intensity="low">Developer</GlitchText>
+            <GlitchText intensity="low">--engineer</GlitchText>
           </motion.h2>
         </div>
 
@@ -102,8 +102,8 @@ export const OrganismsHeroSection = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3 }}
         >
-          プロダクト開発とチームマネジメントに情熱を注ぐエンジニア。
-          ユーザーに価値を届けるプロダクトを作っています。
+          AIとWebを融合させ、価値あるプロダクトを届けるエンジニア。
+          要件定義から実装まで一気通貫で担当しています。
         </motion.p>
 
         <motion.div

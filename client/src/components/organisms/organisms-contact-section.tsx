@@ -3,10 +3,8 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const socials = [
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "GitHub", href: "https://github.com" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Instagram", href: "https://instagram.com" },
+  { name: "X", href: "https://x.com/p4pcfl" },
+  { name: "GitHub", href: "https://github.com/fpon" },
 ];
 
 export const OrganismsContactSection = () => {
@@ -38,11 +36,11 @@ export const OrganismsContactSection = () => {
           <ScrollReveal delay={0.5}>
             <MagneticButton className="mt-12">
               <a
-                href="mailto:your@email.com"
+                href="mailto:fponlv@gmail.com"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-foreground px-12 py-6"
               >
                 <span className="relative z-10 text-[18px] font-medium transition-colors group-hover:text-background">
-                  your@email.com
+                  fponlv@gmail.com
                 </span>
                 <motion.span
                   className="absolute inset-0 bg-foreground"

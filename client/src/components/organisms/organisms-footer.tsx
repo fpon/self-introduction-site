@@ -20,7 +20,7 @@ export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <MagneticButton>
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              YN.
+              ふぽん
             </Link>
           </MagneticButton>
 
@@ -56,7 +56,7 @@ export const OrganismsFooter = ({ onScrollToTop }: OrganismsFooterProps) => {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="text-[12px] text-foreground/70">
-            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+            &copy; {new Date().getFullYear()} ふぽん. All rights reserved.
           </p>
           <p className="text-[12px] text-foreground/70">
             Designed & Built with passion
