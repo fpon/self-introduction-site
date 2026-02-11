@@ -1,13 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const hobbies = [
   {
     title: "アミューズメントカジノ",
-    icon: "🎰",
+    icon: "🃏",
+    iconType: "emoji" as const,
     description:
       "アミューズメントカジノが好きで、2年間ディーラーとして働いていたほど。ブラックジャックやバカラなど、ゲームの駆け引きや場の雰囲気が楽しいです。",
     skills: ["ブラックジャック", "バカラ", "ルーレット", "テキサスホールデム"],
@@ -15,7 +17,8 @@ const hobbies = [
   },
   {
     title: "将棋",
-    icon: "♟️",
+    icon: "/shogi-icon.svg",
+    iconType: "image" as const,
     description:
       "将棋ウォーズで日々対局を楽しんでいます。まだまだ初心者なので何が正解か分からないまま、気ままにカジュアルに指しています。",
     skills: ["将棋ウォーズ 3級", "四間飛車党"],
@@ -57,7 +60,19 @@ export default function HobbiesPage() {
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="mb-6 text-6xl">{hobby.icon}</div>
+                    <div className="mb-6">
+                      {hobby.iconType === "emoji" ? (
+                        <span className="text-6xl">{hobby.icon}</span>
+                      ) : (
+                        <Image
+                          src={hobby.icon}
+                          alt={hobby.title}
+                          width={64}
+                          height={64}
+                          className="invert dark:invert-0 opacity-80"
+                        />
+                      )}
+                    </div>
                     <h3 className="text-2xl font-bold">{hobby.title}</h3>
                     <p className="mt-4 text-[14px] leading-relaxed text-foreground/80">
                       {hobby.description}
