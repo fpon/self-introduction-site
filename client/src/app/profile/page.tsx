@@ -4,33 +4,39 @@ import { motion } from "framer-motion";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const experiences = [
+const milestones = [
   {
-    period: "2016.4 — 2019.3",
-    role: "関西大倉高等学校",
-    company: "",
+    date: "2019.3",
+    title: "関西大倉高等学校 卒業",
     description: "",
   },
   {
-    period: "2019.4 — 2023.3",
-    role: "龍谷大学 社会学部 コミュニティマネジメント学科",
-    company: "",
-    description:
-      "地域社会の課題解決やコミュニティデザインを学習。社会調査の手法や、NPO・行政・企業の協働によるまちづくりについて研究。",
-  },
-  {
-    period: "2022.10 — 2023.3",
-    role: "エンジニアインターン",
-    company: "Sky Grid株式会社",
+    date: "2022.10",
+    title: "Sky Grid株式会社 インターン開始",
     description:
       "在学中にインターンとして開発業務に参画。社内SaaSプロジェクトでNext.js / TypeScript / Prismaを用いた開発を経験。",
   },
   {
-    period: "2023.4 — Present",
-    role: "Webアプリケーションエンジニア",
-    company: "Sky Grid株式会社",
+    date: "2023.3",
+    title: "龍谷大学 社会学部 コミュニティマネジメント学科 卒業",
+    description:
+      "地域社会の課題解決やコミュニティデザインを学習。社会調査の手法や、NPO・行政・企業の協働によるまちづくりについて研究。",
+  },
+  {
+    date: "2023.4",
+    title: "Sky Grid株式会社 入社",
     description:
       "受託開発・自社SaaSの開発に従事。独自AIチャットボット開発ではPMとして累計6名（同時最大5名）をマネジメント。Stripe決済やWebSocketを用いたリアルタイム通信の実装も担当。",
+  },
+  {
+    date: "2025.12",
+    title: "Sky Grid株式会社 退社",
+    description: "",
+  },
+  {
+    date: "2026.3",
+    title: "株式会社フツパー 入社",
+    description: "",
   },
 ];
 
@@ -99,13 +105,13 @@ export default function ProfilePage() {
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
               <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Experience
+                Timeline
               </h2>
             </ScrollReveal>
 
             <div className="mt-12 space-y-0">
-              {experiences.map((exp, index) => (
-                <ScrollReveal key={exp.period} delay={index * 0.1}>
+              {milestones.map((milestone, index) => (
+                <ScrollReveal key={milestone.date} delay={index * 0.1}>
                   <motion.div
                     className="grid grid-cols-1 gap-6 border-t border-border py-12 md:grid-cols-12"
                     whileHover={{ backgroundColor: "var(--hover)" }}
@@ -113,17 +119,18 @@ export default function ProfilePage() {
                   >
                     <div className="md:col-span-3">
                       <span className="text-[13px] text-foreground/70">
-                        {exp.period}
+                        {milestone.date}
                       </span>
                     </div>
                     <div className="md:col-span-9">
-                      <h3 className="text-[18px] font-semibold">{exp.role}</h3>
-                      <p className="mt-1 text-[14px] text-foreground/70">
-                        {exp.company}
-                      </p>
-                      <p className="mt-4 text-[14px] leading-relaxed text-foreground/70">
-                        {exp.description}
-                      </p>
+                      <h3 className="text-[18px] font-semibold">
+                        {milestone.title}
+                      </h3>
+                      {milestone.description && (
+                        <p className="mt-4 text-[14px] leading-relaxed text-foreground/70">
+                          {milestone.description}
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 </ScrollReveal>
