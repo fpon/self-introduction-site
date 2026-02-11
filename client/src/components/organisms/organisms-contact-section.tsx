@@ -3,10 +3,8 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const socials = [
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "GitHub", href: "https://github.com" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Instagram", href: "https://instagram.com" },
+  { name: "X", href: "https://x.com/p4pcfl" },
+  { name: "GitHub", href: "https://github.com/fpon" },
 ];
 
 export const OrganismsContactSection = () => {

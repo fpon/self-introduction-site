@@ -11,8 +11,8 @@ const navItems = [
 ];
 
 const socials = [
-  { name: "Tw", href: "https://twitter.com", full: "Twitter" },
-  { name: "Gh", href: "https://github.com", full: "GitHub" },
+  { name: "X", href: "https://x.com/p4pcfl", full: "X" },
+  { name: "Gh", href: "https://github.com/fpon", full: "GitHub" },
 ];
 
 type OrganismsHeaderProps = {
