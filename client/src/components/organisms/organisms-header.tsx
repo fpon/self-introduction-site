@@ -11,10 +11,7 @@ const navItems = [
   { href: "/management", label: "Management" },
 ];
 
-const socials = [
-  { name: "X", href: "https://x.com/p4pcfl", full: "X" },
-  { name: "Gh", href: "https://github.com/fpon", full: "GitHub" },
-];
+const socials = [{ name: "X", href: "https://x.com/p4pcfl", full: "X" }];
 
 type OrganismsHeaderProps = {
   pathname: string;
