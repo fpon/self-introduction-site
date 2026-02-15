@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const socials = [
-  { name: "X", href: "https://x.com/p4pcfl" },
-  { name: "GitHub", href: "https://github.com/fpon" },
-];
+const socials = [{ name: "X", href: "https://x.com/p4pcfl" }];
 
 export const OrganismsContactSection = () => {
   return (
