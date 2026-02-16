@@ -57,12 +57,10 @@ export const OrganismsAboutSection = ({
 
             <ScrollReveal delay={0.4}>
               <p className="mt-8 text-[15px] leading-relaxed text-foreground/70">
-                仕事を通じて、関わるすべての人を幸せに。
-                要件定義から実装まで一気通貫で担当し、1000万円規模の案件を成功に導いてきました。
+                「仕事を通じて、関わるすべての人を幸せに。」
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
-                顧客課題の解像度を高め、泥臭くやり抜く姿勢を大切にしています。
-                累計6名のメンバー教育経験を通じて、チームの成長にも貢献しています。
+                この信念のもと、ベンチャーで泥臭く成り上がってきました。要件定義から実装まで一気通貫。常にチームを見渡し、全員で勝つことにこだわり続けています。
               </p>
             </ScrollReveal>
 
