@@ -28,11 +28,11 @@ export default function WorksPage() {
       <main className="min-h-screen pt-32">
         <div className="px-8">
           <ScrollReveal>
-            <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-              Portfolio
+            <span className="font-mono text-[11px] text-dracula-green">
+              $ ls -la ./projects
             </span>
             <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-              Works
+              実績一覧
             </h1>
           </ScrollReveal>
 

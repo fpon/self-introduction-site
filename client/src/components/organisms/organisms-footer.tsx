@@ -3,11 +3,11 @@ import Link from "next/link";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "Works", href: "/works" },
-  { label: "Profile", href: "/profile" },
-  { label: "Hobbies", href: "/hobbies" },
-  { label: "Management", href: "/management" },
+  { label: "/home", href: "/" },
+  { label: "/profile", href: "/profile" },
+  { label: "/works", href: "/works" },
+  { label: "/hobbies", href: "/hobbies" },
+  { label: "/contact", href: "/contact" },
 ];
 
 type OrganismsFooterProps = {

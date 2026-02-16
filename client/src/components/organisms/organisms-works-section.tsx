@@ -48,13 +48,11 @@ export const OrganismsWorksSection = () => {
         <ScrollReveal>
           <div className="flex items-end justify-between">
             <div>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Featured Works
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ ls ./projects
               </span>
               <h2 className="mt-2 text-[clamp(2rem,8vw,5rem)] font-bold leading-none tracking-tighter">
-                Selected
-                <br />
-                Projects
+                実績
               </h2>
             </div>
             <Link

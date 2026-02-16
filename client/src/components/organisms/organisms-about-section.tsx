@@ -35,13 +35,11 @@ export const OrganismsAboutSection = ({
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                About
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ whoami
               </span>
               <h2 className="mt-2 text-[clamp(2rem,6vw,4rem)] font-bold leading-tight tracking-tighter">
-                <TextReveal delay={0.2}>Crafting Digital</TextReveal>
-                <br />
-                <TextReveal delay={0.3}>Experiences</TextReveal>
+                <TextReveal delay={0.2}>自己紹介</TextReveal>
               </h2>
             </ScrollReveal>
 
@@ -59,17 +57,17 @@ export const OrganismsAboutSection = ({
             <ScrollReveal delay={0.5}>
               <Link
                 href="/profile"
-                className="mt-8 inline-flex items-center gap-2 text-[13px] font-medium underline underline-offset-4 transition-opacity hover:opacity-60"
+                className="mt-8 inline-flex items-center gap-2 font-mono text-[13px] text-dracula-cyan transition-opacity hover:opacity-60"
               >
-                Read More <span>→</span>
+                $ cd /profile <span>→</span>
               </Link>
             </ScrollReveal>
           </div>
 
           <div>
             <ScrollReveal delay={0.3}>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Skills
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ cat skills.txt
               </span>
             </ScrollReveal>
             <div className="mt-6 space-y-6">
