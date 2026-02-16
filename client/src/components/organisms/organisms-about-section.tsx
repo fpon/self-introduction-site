@@ -4,13 +4,7 @@ import Link from "next/link";
 import type { RefObject } from "react";
 import type { IconType } from "react-icons";
 import { HiRefresh, HiUsers } from "react-icons/hi";
-import {
-  SiNextdotjs,
-  SiPrisma,
-  SiPython,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+import { SiPython, SiTypescript } from "react-icons/si";
 import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
 const skills: {
@@ -18,10 +12,7 @@ const skills: {
   color: string;
   icon: IconType;
 }[] = [
-  { name: "TypeScript", color: "#3178C6", icon: SiTypescript },
-  { name: "Next.js", color: "#ffffff", icon: SiNextdotjs },
-  { name: "TailwindCSS", color: "#06B6D4", icon: SiTailwindcss },
-  { name: "Prisma", color: "#5A67D8", icon: SiPrisma },
+  { name: "TypeScript / Next.js", color: "#3178C6", icon: SiTypescript },
   { name: "Python / FastAPI", color: "#3776AB", icon: SiPython },
   { name: "組織マネジメント", color: "#A78BFA", icon: HiUsers },
   { name: "スクラム開発", color: "#10B981", icon: HiRefresh },
