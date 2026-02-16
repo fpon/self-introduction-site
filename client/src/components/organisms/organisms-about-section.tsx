@@ -23,7 +23,7 @@ const skills: {
   { name: "TailwindCSS", color: "#06B6D4", icon: SiTailwindcss },
   { name: "Prisma", color: "#5A67D8", icon: SiPrisma },
   { name: "Python / FastAPI", color: "#3776AB", icon: SiPython },
-  { name: "チームマネジメント", color: "#A78BFA", icon: HiUsers },
+  { name: "組織マネジメント", color: "#A78BFA", icon: HiUsers },
   { name: "スクラム開発", color: "#10B981", icon: HiRefresh },
 ];
 
