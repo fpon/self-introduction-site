@@ -15,16 +15,15 @@ import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
 const skills: {
   name: string;
-  level: number;
   color: string;
   icon: IconType;
 }[] = [
-  { name: "TypeScript", level: 95, color: "#3178C6", icon: SiTypescript },
-  { name: "Next.js", level: 90, color: "#ffffff", icon: SiNextdotjs },
-  { name: "TailwindCSS", level: 90, color: "#38BDF8", icon: SiTailwindcss },
-  { name: "Prisma", level: 85, color: "#2D3748", icon: SiPrisma },
-  { name: "Python / FastAPI", level: 80, color: "#306998", icon: SiPython },
-  { name: "チームマネジメント", level: 85, color: "#A78BFA", icon: HiUsers },
+  { name: "TypeScript", color: "#3178C6", icon: SiTypescript },
+  { name: "Next.js", color: "#ffffff", icon: SiNextdotjs },
+  { name: "TailwindCSS", color: "#38BDF8", icon: SiTailwindcss },
+  { name: "Prisma", color: "#2D3748", icon: SiPrisma },
+  { name: "Python / FastAPI", color: "#306998", icon: SiPython },
+  { name: "チームマネジメント", color: "#A78BFA", icon: HiUsers },
 ];
 
 type OrganismsAboutSectionProps = {
@@ -100,32 +99,9 @@ export const OrganismsAboutSection = ({
                             style={{ color: skill.color }}
                           />
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <span className="text-[13px] font-medium">
-                              {skill.name}
-                            </span>
-                            <span
-                              className="font-mono text-[11px] font-semibold"
-                              style={{ color: skill.color }}
-                            >
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
-                            <motion.div
-                              className="h-full rounded-full bg-foreground"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              viewport={{ once: true }}
-                              transition={{
-                                duration: 1.2,
-                                delay: 0.5 + index * 0.1,
-                                ease: [0.76, 0, 0.24, 1],
-                              }}
-                            />
-                          </div>
-                        </div>
+                        <span className="text-[13px] font-medium">
+                          {skill.name}
+                        </span>
                       </div>
                     </div>
                   </ScrollReveal>
