@@ -14,16 +14,6 @@ export const works = [
     color: "#6366f1",
   },
   {
-    id: "ai-chatbot",
-    title: "AIチャットボット",
-    category: "AIツール",
-    year: "2023",
-    description:
-      "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
-    tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
-    color: "#10b981",
-  },
-  {
     id: "matching-app",
     title: "お見合いアプリ",
     category: "Webアプリ",
@@ -32,6 +22,16 @@ export const works = [
       "仲人がマッチングをサポートし、オンライン上でお見合いから成婚までを支援するWebアプリ",
     tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
     color: "#ec4899",
+  },
+  {
+    id: "ai-chatbot",
+    title: "AIチャットボット",
+    category: "AIツール",
+    year: "2023",
+    description:
+      "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
+    tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
+    color: "#10b981",
   },
   {
     id: "syllabus-checker",
