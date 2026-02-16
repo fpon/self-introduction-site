@@ -102,7 +102,7 @@ export const OrganismsHeroSection = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3 }}
         >
-          AIとWebを融合させ、価値あるプロダクトを届けるエンジニア。
+          仕事を通じて、関わるすべての人を幸せに。
           要件定義から実装まで一気通貫で担当しています。
         </motion.p>
 

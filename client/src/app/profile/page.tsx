@@ -69,18 +69,18 @@ export default function ProfilePage() {
         <section className="px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                About Me
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ whoami --verbose
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-                Profile
+                プロフィール
               </h1>
             </ScrollReveal>
 
             <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
               <ScrollReveal delay={0.2}>
                 <p className="text-[20px] font-medium leading-relaxed">
-                  AIとWebを融合させ、システムにより生産に集中できる環境を提供するエンジニア。
+                  仕事を通じて、関わるすべての人を幸せに。
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
@@ -98,9 +98,9 @@ export default function ProfilePage() {
         <section className="mt-32 px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Timeline
-              </h2>
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ git log --oneline
+              </span>
             </ScrollReveal>
 
             <div className="mt-12 space-y-0">
@@ -136,11 +136,11 @@ export default function ProfilePage() {
         <section className="mt-32 bg-foreground px-8 py-32 text-background">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <h2 className="text-[11px] uppercase tracking-widest opacity-60">
-                Values
-              </h2>
+              <span className="font-mono text-[11px] opacity-60">
+                $ cat values.json
+              </span>
               <p className="mt-4 text-[clamp(2rem,6vw,4rem)] font-bold leading-tight tracking-tighter">
-                What I Believe In
+                大切にしていること
               </p>
             </ScrollReveal>
 

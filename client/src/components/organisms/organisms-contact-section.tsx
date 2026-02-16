@@ -17,16 +17,13 @@ export const OrganismsContactSection = () => {
 
           <ScrollReveal delay={0.2}>
             <h2 className="mt-4 text-[clamp(2rem,8vw,5rem)] font-bold leading-none tracking-tighter">
-              Let's Work
-              <br />
-              Together
+              Get in Touch
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
             <p className="mx-auto mt-8 max-w-md text-[15px] leading-relaxed text-foreground/70">
-              新しいプロジェクトのご相談、お仕事のご依頼など、
-              お気軽にご連絡ください。
+              情報交換やカジュアルな雑談など、お気軽にご連絡ください。
             </p>
           </ScrollReveal>
 

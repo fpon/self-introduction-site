@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/works", label: "Works" },
-  { href: "/profile", label: "Profile" },
-  { href: "/hobbies", label: "Hobbies" },
-  { href: "/management", label: "Management" },
+  { href: "/", label: "/home" },
+  { href: "/profile", label: "/profile" },
+  { href: "/works", label: "/works" },
+  { href: "/knowledge", label: "/knowledge" },
+  { href: "/hobbies", label: "/hobbies" },
+  { href: "/contact", label: "/contact" },
 ];
 
 const socials = [{ name: "X", href: "https://x.com/p4pcfl", full: "X" }];

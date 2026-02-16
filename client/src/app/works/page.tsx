@@ -8,18 +8,18 @@ import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const categories = [
-  "All",
-  "Web Application",
-  "Mobile App",
-  "AI Tool",
-  "Dashboard",
+  "すべて",
+  "業務システム",
+  "AIツール",
+  "Webアプリ",
+  "業務ツール",
 ];
 
 export default function WorksPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("すべて");
 
   const filteredWorks =
-    activeCategory === "All"
+    activeCategory === "すべて"
       ? works
       : works.filter((work) => work.category === activeCategory);
 
@@ -28,11 +28,11 @@ export default function WorksPage() {
       <main className="min-h-screen pt-32">
         <div className="px-8">
           <ScrollReveal>
-            <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-              Portfolio
+            <span className="font-mono text-[11px] text-dracula-green">
+              $ ls -la ./projects
             </span>
             <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-              Works
+              実績一覧
             </h1>
           </ScrollReveal>
 

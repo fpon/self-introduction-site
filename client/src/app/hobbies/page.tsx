@@ -33,11 +33,11 @@ export default function HobbiesPage() {
         <section className="px-8">
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Off the Clock
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ cat hobbies.txt
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-                Hobbies
+                趣味
               </h1>
             </ScrollReveal>
 

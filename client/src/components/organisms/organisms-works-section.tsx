@@ -4,40 +4,34 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const works = [
   {
-    id: "project-alpha",
-    title: "Project Alpha",
-    category: "Web Application",
-    year: "2024",
-    description: "Next.jsを使用した大規模Webアプリケーション",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    id: "logistics-system",
+    title: "物流基幹システム",
+    category: "業務システム",
+    year: "2025",
+    description:
+      "在庫管理・入出荷・配送手配など物流の日常業務を一元管理する基幹システム",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     color: "#6366f1",
   },
   {
-    id: "project-beta",
-    title: "Project Beta",
-    category: "Mobile App",
-    year: "2023",
-    description: "React Nativeを使用したクロスプラットフォームアプリ",
-    tags: ["React Native", "Expo", "Firebase", "Redux"],
+    id: "matching-app",
+    title: "お見合いアプリ",
+    category: "Webアプリ",
+    year: "2024",
+    description:
+      "仲人が同席し、オンライン上でお見合いをセッティングするWebアプリ",
+    tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
     color: "#ec4899",
   },
   {
-    id: "project-gamma",
-    title: "Project Gamma",
-    category: "AI Tool",
+    id: "ai-chatbot",
+    title: "AIチャットボット",
+    category: "AIツール",
     year: "2023",
-    description: "OpenAI APIを活用した業務効率化ツール",
+    description:
+      "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
     tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
     color: "#10b981",
-  },
-  {
-    id: "project-delta",
-    title: "Project Delta",
-    category: "Dashboard",
-    year: "2022",
-    description: "リアルタイムデータ可視化ダッシュボード",
-    tags: ["Vue.js", "D3.js", "WebSocket", "Node.js"],
-    color: "#f59e0b",
   },
 ];
 
@@ -48,20 +42,18 @@ export const OrganismsWorksSection = () => {
         <ScrollReveal>
           <div className="flex items-end justify-between">
             <div>
-              <span className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Featured Works
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ ls ./projects
               </span>
               <h2 className="mt-2 text-[clamp(2rem,8vw,5rem)] font-bold leading-none tracking-tighter">
-                Selected
-                <br />
-                Projects
+                実績
               </h2>
             </div>
             <Link
               href="/works"
-              className="hidden text-[13px] text-foreground/70 transition-colors hover:text-foreground md:block"
+              className="hidden font-mono text-[13px] text-dracula-cyan transition-opacity hover:opacity-60 md:block"
             >
-              View All →
+              $ cd /works →
             </Link>
           </div>
         </ScrollReveal>
