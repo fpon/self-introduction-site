@@ -2,15 +2,29 @@ import type { MotionValue } from "framer-motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import type { RefObject } from "react";
+import type { IconType } from "react-icons";
+import { HiUsers } from "react-icons/hi";
+import {
+  SiNextdotjs,
+  SiPrisma,
+  SiPython,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
-const skills = [
-  { name: "TypeScript", level: 95 },
-  { name: "Next.js", level: 90 },
-  { name: "TailwindCSS", level: 90 },
-  { name: "Prisma", level: 85 },
-  { name: "FastAPI / Python", level: 80 },
-  { name: "チームマネジメント", level: 85 },
+const skills: {
+  name: string;
+  level: number;
+  color: string;
+  icon: IconType;
+}[] = [
+  { name: "TypeScript", level: 95, color: "#3178C6", icon: SiTypescript },
+  { name: "Next.js", level: 90, color: "#ffffff", icon: SiNextdotjs },
+  { name: "TailwindCSS", level: 90, color: "#06B6D4", icon: SiTailwindcss },
+  { name: "Prisma", level: 85, color: "#5A67D8", icon: SiPrisma },
+  { name: "Python / FastAPI", level: 80, color: "#3776AB", icon: SiPython },
+  { name: "チームマネジメント", level: 85, color: "#A78BFA", icon: HiUsers },
 ];
 
 type OrganismsAboutSectionProps = {
@@ -70,32 +84,54 @@ export const OrganismsAboutSection = ({
                 $ cat skills.txt
               </span>
             </ScrollReveal>
-            <div className="mt-6 space-y-6">
-              {skills.map((skill, index) => (
-                <ScrollReveal key={skill.name} delay={0.4 + index * 0.1}>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[14px] font-medium">
-                      {skill.name}
-                    </span>
-                    <span className="text-[12px] text-foreground/70">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="mt-2 h-px bg-border">
-                    <motion.div
-                      className="h-full bg-foreground"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 1,
-                        delay: 0.5 + index * 0.1,
-                        ease: [0.76, 0, 0.24, 1],
-                      }}
-                    />
-                  </div>
-                </ScrollReveal>
-              ))}
+            <div className="mt-6 space-y-5">
+              {skills.map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <ScrollReveal key={skill.name} delay={0.4 + index * 0.1}>
+                    <div className="group relative">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="flex h-8 w-8 items-center justify-center rounded-md"
+                          style={{ backgroundColor: `${skill.color}20` }}
+                        >
+                          <Icon
+                            className="h-4 w-4"
+                            style={{ color: skill.color }}
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[13px] font-medium">
+                              {skill.name}
+                            </span>
+                            <span
+                              className="font-mono text-[11px] font-semibold"
+                              style={{ color: skill.color }}
+                            >
+                              {skill.level}%
+                            </span>
+                          </div>
+                          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
+                            <motion.div
+                              className="h-full rounded-full"
+                              style={{ backgroundColor: skill.color }}
+                              initial={{ width: 0 }}
+                              whileInView={{ width: `${skill.level}%` }}
+                              viewport={{ once: true }}
+                              transition={{
+                                duration: 1.2,
+                                delay: 0.5 + index * 0.1,
+                                ease: [0.76, 0, 0.24, 1],
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
             </div>
           </div>
         </div>
