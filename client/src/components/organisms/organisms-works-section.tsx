@@ -8,7 +8,8 @@ export const works = [
     title: "物流基幹システム",
     category: "業務システム",
     year: "2024",
-    description: "要件定義から設計、PM、開発まで一貫して担当した基幹システム",
+    description:
+      "在庫管理・入出荷・配送手配など物流の日常業務を一元管理する基幹システム",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     color: "#6366f1",
   },
@@ -18,7 +19,7 @@ export const works = [
     category: "AIツール",
     year: "2024",
     description:
-      "独自のAIを簡単に構築できるWebアプリ。LINE、Web埋め込み、Slackなど外部連携も多数用意",
+      "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
     tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
     color: "#10b981",
   },
@@ -27,7 +28,8 @@ export const works = [
     title: "お見合いアプリ",
     category: "Webアプリ",
     year: "2023",
-    description: "オンライン上でお見合いができるWebアプリ",
+    description:
+      "仲人がマッチングをサポートし、オンライン上でお見合いから成婚までを支援するWebアプリ",
     tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
     color: "#ec4899",
   },
@@ -36,7 +38,8 @@ export const works = [
     title: "シラバスチェックアプリ",
     category: "業務ツール",
     year: "2023",
-    description: "大学教授が記載するシラバスをAIでチェックするアプリ",
+    description:
+      "大学教授が作成したシラバスをAIが自動でチェックし、記載漏れや改善点を提案するアプリ",
     tags: ["Next.js", "TypeScript", "OpenAI"],
     color: "#f59e0b",
   },
