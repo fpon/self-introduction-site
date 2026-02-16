@@ -71,7 +71,7 @@ const SectionFolder = ({ section }: { section: KnowledgeSection }) => {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center gap-2 py-2 text-left transition-colors hover:text-dracula-cyan"
+        className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left transition-all hover:bg-foreground/10"
       >
         {isOpen ? (
           <HiFolderOpen className="h-5 w-5 text-dracula-yellow" />
@@ -79,6 +79,9 @@ const SectionFolder = ({ section }: { section: KnowledgeSection }) => {
           <HiFolder className="h-5 w-5 text-dracula-yellow" />
         )}
         <span className="text-[15px] font-medium">{section.title}/</span>
+        <span className="ml-auto text-[11px] text-foreground/40">
+          {isOpen ? "▼" : "▶"}
+        </span>
       </button>
 
       {isOpen && (
@@ -107,10 +110,10 @@ const SectionFolder = ({ section }: { section: KnowledgeSection }) => {
                 <a
                   href={item.pdfUrl}
                   download
-                  className="flex items-center gap-1 rounded-md bg-dracula-green/10 px-3 py-1.5 text-[12px] text-dracula-green transition-colors hover:bg-dracula-green/20"
+                  className="flex items-center gap-2 rounded-full border border-dracula-green bg-dracula-green/10 px-4 py-2 text-[12px] font-medium text-dracula-green transition-all hover:bg-dracula-green hover:text-background"
                 >
                   <HiDocumentDownload className="h-4 w-4" />
-                  PDF
+                  ダウンロード
                 </a>
               )}
             </div>
