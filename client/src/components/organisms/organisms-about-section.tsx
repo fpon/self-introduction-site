@@ -112,7 +112,10 @@ export const OrganismsAboutSection = ({
                               {skill.level}%
                             </span>
                           </div>
-                          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
+                          <div
+                            className="mt-2 h-1.5 overflow-hidden rounded-full"
+                            style={{ backgroundColor: `${skill.color}20` }}
+                          >
                             <motion.div
                               className="h-full rounded-full"
                               style={{ backgroundColor: skill.color }}
