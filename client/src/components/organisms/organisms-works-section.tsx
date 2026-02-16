@@ -19,7 +19,7 @@ export const works = [
     category: "Webアプリ",
     year: "2024",
     description:
-      "仲人がマッチングをサポートし、オンライン上でお見合いから成婚までを支援するWebアプリ",
+      "仲人が同席し、オンライン上でお見合いをセッティングするWebアプリ",
     tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
     color: "#ec4899",
   },
@@ -32,16 +32,6 @@ export const works = [
       "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
     tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
     color: "#10b981",
-  },
-  {
-    id: "syllabus-checker",
-    title: "シラバスチェックアプリ",
-    category: "業務ツール",
-    year: "2023",
-    description:
-      "大学教授が作成したシラバスをAIが自動でチェックし、記載漏れや改善点を提案するアプリ",
-    tags: ["Next.js", "TypeScript", "OpenAI"],
-    color: "#f59e0b",
   },
 ];
 
