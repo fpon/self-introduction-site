@@ -7,7 +7,7 @@ export const works = [
     id: "logistics-system",
     title: "物流基幹システム",
     category: "業務システム",
-    year: "2024",
+    year: "2025",
     description:
       "在庫管理・入出荷・配送手配など物流の日常業務を一元管理する基幹システム",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
@@ -17,7 +17,7 @@ export const works = [
     id: "ai-chatbot",
     title: "AIチャットボット",
     category: "AIツール",
-    year: "2024",
+    year: "2023",
     description:
       "独自のAIチャットボットを簡単に構築できるWebアプリ。LINE・Web埋め込み・Slackなど外部連携も多数用意",
     tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
@@ -27,7 +27,7 @@ export const works = [
     id: "matching-app",
     title: "お見合いアプリ",
     category: "Webアプリ",
-    year: "2023",
+    year: "2024",
     description:
       "仲人がマッチングをサポートし、オンライン上でお見合いから成婚までを支援するWebアプリ",
     tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
