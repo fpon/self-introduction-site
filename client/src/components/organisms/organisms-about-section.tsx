@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { RefObject } from "react";
 import type { IconType } from "react-icons";
-import { HiRefresh, HiUsers } from "react-icons/hi";
+import {
+  HiBriefcase,
+  HiClipboardList,
+  HiRefresh,
+  HiUsers,
+} from "react-icons/hi";
 import { SiPython, SiTypescript } from "react-icons/si";
 import { ScrollReveal, TextReveal } from "@/components/ScrollReveal";
 
@@ -14,6 +19,8 @@ const skills: {
 }[] = [
   { name: "TypeScript / Next.js", color: "#3178C6", icon: SiTypescript },
   { name: "Python / FastAPI", color: "#3776AB", icon: SiPython },
+  { name: "要件定義 / 設計", color: "#F59E0B", icon: HiClipboardList },
+  { name: "PM", color: "#EF4444", icon: HiBriefcase },
   { name: "組織マネジメント", color: "#A78BFA", icon: HiUsers },
   { name: "スクラム開発", color: "#10B981", icon: HiRefresh },
 ];
