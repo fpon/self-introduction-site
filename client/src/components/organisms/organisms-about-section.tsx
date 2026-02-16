@@ -21,9 +21,9 @@ const skills: {
 }[] = [
   { name: "TypeScript", level: 95, color: "#3178C6", icon: SiTypescript },
   { name: "Next.js", level: 90, color: "#ffffff", icon: SiNextdotjs },
-  { name: "TailwindCSS", level: 90, color: "#06B6D4", icon: SiTailwindcss },
-  { name: "Prisma", level: 85, color: "#5A67D8", icon: SiPrisma },
-  { name: "Python / FastAPI", level: 80, color: "#3776AB", icon: SiPython },
+  { name: "TailwindCSS", level: 90, color: "#38BDF8", icon: SiTailwindcss },
+  { name: "Prisma", level: 85, color: "#2D3748", icon: SiPrisma },
+  { name: "Python / FastAPI", level: 80, color: "#306998", icon: SiPython },
   { name: "チームマネジメント", level: 85, color: "#A78BFA", icon: HiUsers },
 ];
 
@@ -112,13 +112,9 @@ export const OrganismsAboutSection = ({
                               {skill.level}%
                             </span>
                           </div>
-                          <div
-                            className="mt-2 h-1.5 overflow-hidden rounded-full"
-                            style={{ backgroundColor: `${skill.color}20` }}
-                          >
+                          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
                             <motion.div
-                              className="h-full rounded-full"
-                              style={{ backgroundColor: skill.color }}
+                              className="h-full rounded-full bg-foreground"
                               initial={{ width: 0 }}
                               whileInView={{ width: `${skill.level}%` }}
                               viewport={{ once: true }}
