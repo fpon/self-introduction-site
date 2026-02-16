@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { RefObject } from "react";
 import type { IconType } from "react-icons";
-import { HiUsers } from "react-icons/hi";
+import { HiRefresh, HiUsers } from "react-icons/hi";
 import {
   SiNextdotjs,
   SiPrisma,
@@ -20,10 +20,11 @@ const skills: {
 }[] = [
   { name: "TypeScript", color: "#3178C6", icon: SiTypescript },
   { name: "Next.js", color: "#ffffff", icon: SiNextdotjs },
-  { name: "TailwindCSS", color: "#38BDF8", icon: SiTailwindcss },
-  { name: "Prisma", color: "#2D3748", icon: SiPrisma },
-  { name: "Python / FastAPI", color: "#306998", icon: SiPython },
+  { name: "TailwindCSS", color: "#06B6D4", icon: SiTailwindcss },
+  { name: "Prisma", color: "#5A67D8", icon: SiPrisma },
+  { name: "Python / FastAPI", color: "#3776AB", icon: SiPython },
   { name: "チームマネジメント", color: "#A78BFA", icon: HiUsers },
+  { name: "スクラム開発", color: "#10B981", icon: HiRefresh },
 ];
 
 type OrganismsAboutSectionProps = {
