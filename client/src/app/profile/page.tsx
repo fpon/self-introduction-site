@@ -80,7 +80,7 @@ export default function ProfilePage() {
             <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
               <ScrollReveal delay={0.2}>
                 <p className="text-[20px] font-medium leading-relaxed">
-                  AIとWebを融合させ、システムにより生産に集中できる環境を提供するエンジニア。
+                  仕事を通じて、関わるすべての人を幸せに。
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>

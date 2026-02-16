@@ -57,7 +57,7 @@ export const OrganismsAboutSection = ({
 
             <ScrollReveal delay={0.4}>
               <p className="mt-8 text-[15px] leading-relaxed text-foreground/70">
-                AIとWebを融合させ、システムにより生産に集中できる環境を提供するエンジニアです。
+                仕事を通じて、関わるすべての人を幸せに。
                 要件定義から実装まで一気通貫で担当し、1000万円規模の案件を成功に導いてきました。
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
