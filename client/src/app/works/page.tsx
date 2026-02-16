@@ -8,18 +8,18 @@ import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const categories = [
-  "All",
-  "Web Application",
-  "Mobile App",
-  "AI Tool",
-  "Dashboard",
+  "すべて",
+  "業務システム",
+  "AIツール",
+  "Webアプリ",
+  "業務ツール",
 ];
 
 export default function WorksPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("すべて");
 
   const filteredWorks =
-    activeCategory === "All"
+    activeCategory === "すべて"
       ? works
       : works.filter((work) => work.category === activeCategory);
 

@@ -14,7 +14,9 @@ export default function WorkDetailPage() {
   if (!work) {
     return (
       <main className="flex min-h-screen items-center justify-center">
-        <p>Work not found</p>
+        <p className="font-mono text-foreground/70">
+          $ cat project.txt: No such file or directory
+        </p>
       </main>
     );
   }
@@ -37,9 +39,9 @@ export default function WorkDetailPage() {
             <ScrollReveal>
               <Link
                 href="/works"
-                className="inline-flex items-center gap-2 text-[13px] opacity-70 transition-opacity hover:opacity-100"
+                className="inline-flex items-center gap-2 font-mono text-[13px] opacity-70 transition-opacity hover:opacity-100"
               >
-                ← Back to Works
+                $ cd /works ←
               </Link>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
@@ -58,9 +60,9 @@ export default function WorkDetailPage() {
         <section className="px-8 py-24">
           <div className="mx-auto max-w-4xl">
             <ScrollReveal>
-              <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                Overview
-              </h2>
+              <span className="font-mono text-[11px] text-dracula-green">
+                $ cat overview.txt
+              </span>
               <p className="mt-4 text-[20px] leading-relaxed">
                 {work.description}
               </p>
@@ -69,15 +71,15 @@ export default function WorkDetailPage() {
             <ScrollReveal delay={0.2}>
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div>
-                  <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                    Role
-                  </h3>
-                  <p className="mt-2 text-[15px]">Lead Developer</p>
+                  <span className="font-mono text-[11px] text-dracula-cyan">
+                    役割
+                  </span>
+                  <p className="mt-2 text-[15px]">リード開発者 / PM</p>
                 </div>
                 <div>
-                  <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                    Timeline
-                  </h3>
+                  <span className="font-mono text-[11px] text-dracula-cyan">
+                    時期
+                  </span>
                   <p className="mt-2 text-[15px]">{work.year}</p>
                 </div>
               </div>
@@ -85,9 +87,9 @@ export default function WorkDetailPage() {
 
             <ScrollReveal delay={0.3}>
               <div className="mt-16">
-                <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                  Technologies
-                </h3>
+                <span className="font-mono text-[11px] text-dracula-green">
+                  $ cat package.json | jq '.dependencies'
+                </span>
                 <div className="mt-4 flex flex-wrap gap-3">
                   {work.tags.map((tag) => (
                     <span
@@ -103,22 +105,19 @@ export default function WorkDetailPage() {
 
             <ScrollReveal delay={0.4}>
               <div className="mt-24">
-                <h3 className="text-[11px] uppercase tracking-widest text-foreground/70">
-                  Project Details
-                </h3>
+                <span className="font-mono text-[11px] text-dracula-green">
+                  $ cat README.md
+                </span>
                 <div className="mt-6 space-y-6 text-[15px] leading-relaxed text-foreground/70">
                   <p>
-                    このプロジェクトでは、ユーザー体験を最優先に考え、直感的で使いやすいインターフェースを設計しました。
-                    最新の技術スタックを採用し、パフォーマンスと保守性の両立を実現しています。
+                    このプロジェクトでは、顧客課題の解像度を高め、要件定義から実装まで一気通貫で担当しました。
+                    ユーザー体験を最優先に考え、直感的で使いやすいインターフェースを設計しています。
                   </p>
                   <p>
-                    開発チームのリードとして、アーキテクチャの設計から実装、テスト、デプロイまで一貫して担当。
-                    アジャイル開発手法を取り入れ、継続的な改善を行いました。
+                    チームのリードとして、アーキテクチャの設計から実装、テスト、デプロイまで一貫して担当。
+                    上流工程での納期調整やチームメンバーのマネジメントも行いました。
                   </p>
-                  <p>
-                    プロジェクトの成功により、ユーザー満足度の大幅な向上と、
-                    運用コストの削減を同時に達成することができました。
-                  </p>
+                  <p>泥臭くやり抜く姿勢で、プロジェクトを成功に導きました。</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -127,9 +126,9 @@ export default function WorkDetailPage() {
 
         <section className="border-t border-border px-8 py-24">
           <ScrollReveal>
-            <h2 className="text-[11px] uppercase tracking-widest text-foreground/70">
-              Other Works
-            </h2>
+            <span className="font-mono text-[11px] text-dracula-green">
+              $ ls ./other-projects
+            </span>
           </ScrollReveal>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
             {otherWorks.map((otherWork, index) => (

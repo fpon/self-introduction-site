@@ -4,39 +4,42 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const works = [
   {
-    id: "project-alpha",
-    title: "Project Alpha",
-    category: "Web Application",
+    id: "logistics-system",
+    title: "物流基幹システム",
+    category: "業務システム",
     year: "2024",
-    description: "Next.jsを使用した大規模Webアプリケーション",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    description:
+      "要件定義から設計・PM・開発まで一気通貫で担当した1000万円規模の基幹システム",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     color: "#6366f1",
   },
   {
-    id: "project-beta",
-    title: "Project Beta",
-    category: "Mobile App",
-    year: "2023",
-    description: "React Nativeを使用したクロスプラットフォームアプリ",
-    tags: ["React Native", "Expo", "Firebase", "Redux"],
-    color: "#ec4899",
-  },
-  {
-    id: "project-gamma",
-    title: "Project Gamma",
-    category: "AI Tool",
-    year: "2023",
-    description: "OpenAI APIを活用した業務効率化ツール",
+    id: "ai-chatbot",
+    title: "AIチャットボット",
+    category: "AIツール",
+    year: "2024",
+    description:
+      "PMとして累計8名（海外外注3名含む）をマネジメントした独自AIチャットボット",
     tags: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
     color: "#10b981",
   },
   {
-    id: "project-delta",
-    title: "Project Delta",
-    category: "Dashboard",
-    year: "2022",
-    description: "リアルタイムデータ可視化ダッシュボード",
-    tags: ["Vue.js", "D3.js", "WebSocket", "Node.js"],
+    id: "matching-app",
+    title: "お見合いアプリ",
+    category: "Webアプリ",
+    year: "2023",
+    description:
+      "Stripe決済・WebSocketリアルタイム通信を実装したマッチングアプリ",
+    tags: ["Next.js", "TypeScript", "Stripe", "WebSocket"],
+    color: "#ec4899",
+  },
+  {
+    id: "syllabus-checker",
+    title: "シラバスチェックアプリ",
+    category: "業務ツール",
+    year: "2023",
+    description: "大学教授向けのシラバス内容確認・検証ツール",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     color: "#f59e0b",
   },
 ];
@@ -57,9 +60,9 @@ export const OrganismsWorksSection = () => {
             </div>
             <Link
               href="/works"
-              className="hidden text-[13px] text-foreground/70 transition-colors hover:text-foreground md:block"
+              className="hidden font-mono text-[13px] text-dracula-cyan transition-opacity hover:opacity-60 md:block"
             >
-              View All →
+              $ cd /works →
             </Link>
           </div>
         </ScrollReveal>
