@@ -135,7 +135,7 @@ export default function KnowledgePage() {
                 $ ls -la ./knowledge
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-                ナレッジ
+                資料
               </h1>
             </ScrollReveal>
 
