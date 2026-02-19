@@ -132,10 +132,10 @@ export default function KnowledgePage() {
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
               <span className="font-mono text-[11px] text-dracula-green">
-                $ ls -la ./knowledge
+                $ ls -la ./documents
               </span>
               <h1 className="mt-2 text-[clamp(3rem,10vw,8rem)] font-bold leading-none tracking-tighter">
-                ナレッジ
+                資料
               </h1>
             </ScrollReveal>
 
@@ -152,7 +152,7 @@ export default function KnowledgePage() {
             <ScrollReveal delay={0.3}>
               <div className="rounded-2xl border border-border bg-foreground/[0.02] p-6">
                 <div className="mb-4 flex items-center gap-2 border-b border-border pb-4 font-mono text-[12px] text-foreground/50">
-                  <span>~/knowledge</span>
+                  <span>~/documents</span>
                 </div>
                 <div className="space-y-2">
                   {knowledgeSections.map((section) => (
